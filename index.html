@@ -34,14 +34,95 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin first-->
-        <section class="first section" id="first">
+        <!-- begin sidebar-->
+        <div class="sidebar" id="sidebar">
+          <div class="sidebar__toggle"><i class="icon-close"></i></div>
+          <div class="sidebar__list"><a class="sidebar__item" href="#">
+              <div class="sidebar__content">
+                <div class="sidebar__icon"><i class="icon-head"></i></div>
+                <div class="sidebar__text"><span>Оставить заявку</span></div>
+              </div></a><a class="sidebar__item" href="#">
+              <div class="sidebar__content">
+                <div class="sidebar__icon"><i class="icon-price_2"></i></div>
+                <div class="sidebar__text"><span>Скачать прайс</span></div>
+              </div></a><a class="sidebar__item" href="#">
+              <div class="sidebar__content">
+                <div class="sidebar__icon sidebar__icon_circle"><i class="icon-viber"></i></div>
+                <div class="sidebar__text"><span>Написать в Viber</span></div>
+              </div></a></div>
+        </div>
+        <!-- end sidebar-->
+        <!-- begin testbtn-->
+        <section class="testbtn section" id="testbtn">
           <div class="container_center">
-            <h2 class="section__title">first section title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p><i class="icon-home"><i class="icon-clock2"><i class="icon-calendar"><i class="icon-printer"></i></i></i></i></p>
+            <h2 class="section__title">testbtn</h2>
+            <div class="testbtn__content"><a class="btn btn_upper" href="#">Оставить заявку</a><br/><br/><a class="btn" href="#">Оставить заявку</a><br/><br/><a class="btn btn_reverse" href="#">Оставить заявку</a><br/><br/><a class="btn btn_lg" href="#"><span>Оставить заявку на расчет стоимости</span></a><br/><br/><a class="btn btn_lg" href="#"><span>Получить прайс сейчас</span></a></div>
           </div>
         </section>
+        <!-- end testbtn-->
+        <!-- begin test-->
+        <section class="test section" id="test">
+          <div class="container_center">
+            <h2 class="section__title"> </h2>
+            <div class="test__content">
+              <Lorem>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Lorem>
+            </div>
+          </div>
+        </section>
+        <!-- end test-->
+        <!-- begin testingrequisition-->
+        <section class="testingrequisition section" id="testingrequisition">
+          <div class="container_center">
+            <h2 class="section__title"> requisition</h2>
+            <div class="testingrequisition__content">
+              <!-- Button trigger modal requisition-->
+              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition">Click to open modal</button>
+              <!-- Begin Modal requisition-->
+              <div class="modal fade requisition" id="requisition">
+                <div class="modal-dialog">
+                  <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+                    <div class="modal-header">
+                      <div class="modal-title"> <span>Оставьте заявку на <b>расчет стоимости</b></span></div>
+                      <div class="modal-subtitle"><span>Только телефон и мы в деле. Перезвоним через пару минут</span></div>
+                      <div class="modal-select"><span>Выберите из списка нужную услугу:</span></div>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form" action="send.php">
+                        <input type="hidden" name="subject" value="Oставить заявку"/>
+                        <input type="hidden" name="notspam" value=""/>
+                        <div class="form__row">
+                          <select class="select" data-placeholder="Строительство дома" name="select">
+                            <option value=""></option>
+                            <option value="Строительство дома">Строительство дома</option>
+                            <option value="Строительство дома 2">Строительство дома 2</option>
+                            <option value="Строительство дома 3">Строительство дома 3</option>
+                            <option value="Строительство дома 4">Строительство дома 4</option>
+                          </select>
+                        </div>
+                        <div class="form__row">
+                          <input type="tel" id="tel" name="tel" required="required" placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _"/>
+                        </div>
+                        <div class="form__row">
+                          <button class="btn" id="btn_didisabled_js" type="submit"><span>Оставить заявку</span></button>
+                        </div>
+                        <div class="form__row">
+                          <div class="form__privacy">
+                            <label class="form__check">
+                              <input id="check_checked" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End modal requisition-->
+            </div>
+          </div>
+        </section>
+        <!-- end testingrequisition-->
+        <!-- begin first-->
         <!-- end first-->
         <!-- begin form-->
         <section class="form section" id="form">
@@ -121,96 +202,12 @@
         <!-- end form-->
         <!-- Button trigger modal info-->
         <!-- Begin Modal info-->
-        <div class="modal fade info" id="info">
-          <div class="modal-dialog">
-            <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-              <div class="form__message"></div>
-            </div>
-          </div>
-        </div>
         <!-- End modal info-->
         <!-- begin faq-->
-        <section class="faq section" id="faq">
-          <div class="container_center">
-            <h2 class="section__title">F.A.Q.</h2>
-            <div class="faq__content">
-              <div class="collapse" data-collapse-wrapper="">
-                <div class="collapse__title open" data-collapse=""> <span>Вопрос о школе</span></div>
-                <!-- Добавить класс open для открытого состояния-->
-                <div class="collapse__body open" data-collapse-body="">
-                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
-                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
-                </div>
-              </div>
-              <div class="collapse" data-collapse-wrapper="">
-                <div class="collapse__title" data-collapse=""><span>Структура рынка нейтрализует повторный контакт, не считаясь с затратами</span></div>
-                <div class="collapse__body" data-collapse-body="">
-                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
-                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
-                </div>
-              </div>
-              <div class="collapse" data-collapse-wrapper="">
-                <div class="collapse__title" data-collapse=""><span>Потребительский рынок упорядочивает рейтинг</span></div>
-                <div class="collapse__body" data-collapse-body="">
-                  <p>Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.</p>
-                  <p>В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- end faq-->
         <!-- begin tabsPreview-->
-        <section class="tabsPreview section" id="tabsPreview">
-          <div class="container_center">
-            <h2 class="section__title">tabs Preview</h2>
-            <div class="tabsPreview__content">
-              <div class="tabs">
-                <div class="tabs__item active" data-tab="#plate-1">Item 1</div>
-                <div class="tabs__item" data-tab="#plate-2">Item 2</div>
-                <div class="tabs__item" data-tab="#plate-3">Item 3</div>
-                <div class="tabs__item" data-tab="#plate-4">Item 4</div>
-              </div>
-              <div class="tabContent">
-                <div class="tabContent__item active" id="plate-1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.</div>
-                <div class="tabContent__item" id="plate-2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.</div>
-                <div class="tabContent__item" id="plate-3"> Lorem ipsum dolor sit amet.</div>
-                <div class="tabContent__item" id="plate-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.</div>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- end tabsPreview-->
         <!-- begin dropPreview-->
-        <section class="dropPreview section" id="dropPreview">
-          <div class="container_center">
-            <h2 class="section__title">drop Preview</h2>
-            <div class="dropPreview__content">
-              <div class="drop">
-                <div class="drop__toggle">Click me</div>
-                <div class="drop__list">
-                  <div class="drop__item">Item 1</div>
-                  <div class="drop__item">Item 2</div>
-                  <div class="drop__item">Item 3</div>
-                  <div class="drop__item">Item 4</div>
-                </div>
-              </div>
-              <div class="drop">
-                <div class="drop__toggle">Click me</div>
-                <div class="drop__list">
-                  <div class="drop__item">Item 1</div>
-                  <div class="drop__item">Item 2</div>
-                  <div class="drop__item">Item 3</div>
-                  <div class="drop__item">Item 4</div>
-                </div>
-              </div>
-            </div>
-            <div class="content">
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.</p>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.</p>
-            </div>
-          </div>
-        </section>
         <!-- end dropPreview-->
         <!-- begin sliderPreview-->
         <section class="sliderPreview section" id="sliderPreview">
@@ -244,24 +241,6 @@
         </section>
         <!-- end sliderPreview-->
         <!-- begin programsInfo-->
-        <section class="section">
-          <div class="container_center">
-            <div class="programsInfo">
-              <div class="programsInfo__item">
-                <div class="programsInfo__number">12</div>
-                <div class="programsInfo__text">Программ</div>
-              </div>
-              <div class="programsInfo__item">
-                <div class="programsInfo__number">25</div>
-                <div class="programsInfo__text">Компетенций</div>
-              </div>
-              <div class="programsInfo__item">
-                <div class="programsInfo__number">29</div>
-                <div class="programsInfo__text">Преподавателей <br>и экспертов</div>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- end programsInfo-->
       </main>
       <footer class="footer">
@@ -275,7 +254,6 @@
       <script src="js/slick.min.js"></script>
       <script src="js/select2.min.js"></script>
       <script src="js/function.js?undefined"></script>
-      <div class="nav_open_bg"></div>
     </div>
   </body>
 </html>

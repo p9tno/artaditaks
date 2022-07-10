@@ -1,68 +1,101 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	color: $btn_default_text_color;
+	color: $color_white;
 	font-family: $main_font_family;
 	font-size: 1em;
-	font-weight: 400;
-	padding: 0.3125em 1em 0.4375em;
-	/* 5/16 */
-	/* 7/16 */
+	font-weight: 700;
+	padding: 1.745em 3.4775em;
 	border: none;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
-	background-color: $btn_default_bg_color;
+	background-color: $color_warning;
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 0.3125em;
-	/* 5/16 */
+	letter-spacing: 0.03em;
+	border-radius: 3.625em;
+
 	transition: 0.3s;
-	transition-property: background color border-color;
 
-	// градиент
-	// position: relative;
-	// z-index: 10;
-	// overflow: hidden;
-	//
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: -1;
-	// 	transition: width 0.5s;
-	// 	background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
-	// }
-	//
-	// &:hover {
-	// 	background-color: #fff;
-	// 	color: $color_withe;
-	// 	text-decoration: none;
-	//
-	// 	&:before {
-	// 		width: 150%;
-	// 	}
-	// }
-
-	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+	span {
+		display: inline-block;
+		width: 11em;
+		font-size: 1.25em;
 	}
 
-	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+	@media (min-width: 768px) {
+		position: relative;
+		overflow-x: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150%;
+			height: 100%;
+			width: 3em;
+			transform: skewX(-45deg);
+			background: linear-gradient(90deg, rgba($color_white, 0.2), rgba($color_white, 1));
+			animation: flare 5s infinite linear;
+		}
+
+		&:hover {
+			background-color: darken($color_warning, 5%);
+		}
+
+		&:active {
+			background-color: darken($color_warning, 7%);
+		}
 	}
 
 	&:disabled {
 		color: red;
 		cursor: not-allowed;
-		// pointer-events: none;
 	}
 
+	&_lg {
+		padding: 1.625em 4.469em;
+	}
+
+	&_reverse {
+		background-color: $color_white;
+		color: $color_warning;
+
+		@media (min-width: 768px) {
+			&:hover {
+				background-color: darken($color_white, 1%);
+			}
+
+			&:active {
+				background-color: darken($color_white, 2%);
+			}
+		}
+
+	}
+
+	&_upper {
+		text-transform: uppercase;
+		font-size: 0.875em;
+		letter-spacing: 0.07em;
+		padding: 1.723em 3.683em;
+	}
+
+}
+
+@media (min-width: 768px) {
+	@keyframes flare {
+		0% {
+			left: -150%;
+		}
+
+		80% {
+			left: -150%;
+		}
+
+		100% {
+			left: 150%;
+		}
+	}
 }

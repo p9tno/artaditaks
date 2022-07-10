@@ -19,34 +19,13 @@
 
     &-close {
         position: absolute;
-        width: 1.5em;
-        height: 1.5em;
-        right: 1em;
-        top: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $main_color;
-        // background: image-url('close.svg') no-repeat center center;
-        &:after,
-        &:before {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100%;
-            border-top: 2px solid;
-        }
+        right: 3.625em;
+        top: 3.625em;
+        color: $color_white;
+        text-decoration: none;
 
-        &:before {
-            transform: rotate(45deg);
-        }
-
-        &:after {
-            transform: rotate(-45deg);
-        }
-
-        &:hover {
-            opacity: 0.8;
+        i {
+            font-size: 1.67em;
         }
     }
 
@@ -70,19 +49,20 @@
         position: relative;
         width: auto;
         margin: auto;
-        // max-width: 40em;
-        width: 40em;
+        width: 41.875em;
     }
 
     &-content {
         position: relative;
-        background-color: #fff;
+        background-image: url("../img/modal_bg.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         border: none;
-        border-radius: 0;
-        box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
-        background-clip: padding-box;
+        border-radius: 2.1875em;
+        // background-clip: padding-box;
         outline: 0;
-        padding: 1em 1.1em;
+        padding: 3.875em 9.25em;
     }
 
     &-backdrop {
@@ -106,23 +86,39 @@
     }
 
     &-header {
-        padding: 1em 0;
-        /* 16/16 */
-        min-height: 1em;
-        /* 16/16 */
-        color: #666;
-        font-size: 1.125em;
-        /* 18/16 */
-
-        .close {
-            margin-top: -0.125em;
-            /* 2/16 */
-        }
+        color: $color_white;
+        text-align: center;
     }
 
     &-title {
-        margin: 0;
-        line-height: 1.4;
+        // margin: 0;
+        line-height: 1.333;
+        letter-spacing: 0.02em;
+        margin-bottom: 1em;
+
+        span {
+            font-size: 2.25em;
+        }
+    }
+
+    &-subtitle {
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+        margin-bottom: 2em;
+
+        span {
+            font-size: 1.5em;
+        }
+    }
+
+    &-select {
+        letter-spacing: 0.03em;
+        margin-bottom: 2em;
+
+        span {
+            font-size: 1.3125em;
+            font-weight: 500;
+        }
     }
 
     &-body {

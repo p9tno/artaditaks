@@ -44,6 +44,7 @@ body {
  ----------------------------------------------------------------------------- */
 .main_content {
 	flex-grow: 1;
+	// background-color: #ddd;
 	// padding-bottom: $footer_height;
 	// @extend %clear_a;
 }
@@ -75,3 +76,7 @@ body {
 		display: none !important;
 	}
 }
+
+// * {
+// 	border: 1px solid #000;
+// }

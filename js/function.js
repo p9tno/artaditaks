@@ -48,7 +48,17 @@ $(document).ready(function() {
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
+
     openMobileNav();
+
+    function openSidebar() {
+        $('.sidebar__toggle').click(function(event) {
+            console.log('Показ меню');
+            $('.sidebar__toggle').toggleClass('sidebar__toggle_hide');
+            $('.sidebar__list').toggleClass('sidebar__list_hide');
+        });
+    };
+    openSidebar();
 
     function activeNav() {
         $('.menu-item').on('click', function() {
