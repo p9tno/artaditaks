@@ -3,248 +3,237 @@ extends layout/layout.pug
 block content
 
     // begin firstScreen
-    section#firstScreen.firstScreen.section
-        .container_center
-            h2.section__title 
-                span Строительство <b>индивидуальных жилых домов</b> "под ключ в Бресте и области"
-            .firstScreen__desc
-                span От разбивки участка под заливку фундамента до ввода объекта в эксплуатацию
-
-            .firstScreen__bullets
-                .bullets
-                    .bullets__item
-                        .bullets__icon
-                            i.icon-price
-                        .bullets__content
-                            span <b>Фиксируем цену в договоре</b> и разбиваем строительство на этапы
-
-                    .bullets__item
-                        .bullets__icon
-                            i.icon-tool
-                        .bullets__content
-                            span <b>Закупаем материалы сами</b> или работаем с материалами заказчика
-
-
-                    .bullets__item
-                        .bullets__icon
-                            i.icon-advise
-                        .bullets__content
-                            span <b>Советуем и подсказываем</b> как лучше
-
-            .firstScreen__action
-                .firstScreen__btn
-                    a(href="#").btn.btn_lg
-                        span Оставить заявку на расчет стоимости
-                .firstScreen__info
-                    span <b>Перезвоним и проконсультируем</b> через 5 минут
+    //- section#firstScreen.firstScreen.section
+    //-     .container_center
+    //-         h2.section__title 
+    //-             span Строительство <b>индивидуальных жилых домов</b> "под ключ в Бресте и области"
+    //-         .firstScreen__desc
+    //-             span От разбивки участка под заливку фундамента до ввода объекта в эксплуатацию
+    //- 
+    //-         .firstScreen__bullets
+    //-             .bullets
+    //-                 .bullets__item
+    //-                     .bullets__icon
+    //-                         i.icon-price
+    //-                     .bullets__content
+    //-                         span <b>Фиксируем цену в договоре</b> и разбиваем строительство на этапы
+    //- 
+    //-                 .bullets__item
+    //-                     .bullets__icon
+    //-                         i.icon-tool
+    //-                     .bullets__content
+    //-                         span <b>Закупаем материалы сами</b> или работаем с материалами заказчика
+    //- 
+    //- 
+    //-                 .bullets__item
+    //-                     .bullets__icon
+    //-                         i.icon-advise
+    //-                     .bullets__content
+    //-                         span <b>Советуем и подсказываем</b> как лучше
+    //- 
+    //-         .firstScreen__action
+    //-             .firstScreen__btn
+    //-                 a(href="#").btn.btn_lg
+    //-                     span Оставить заявку на расчет стоимости
+    //-             .firstScreen__info
+    //-                 span <b>Перезвоним и проконсультируем</b> через 5 минут
     // end firstScreen
 
     // begin services
-    section#services.services.section
-        .container_center
-            h2.section__title 
-                span Оказываем <b>полный спектр услуг</b> в строительстве
-
-            .slider__arrows
-            .slider.js-slider
-                each item in [ {title: 'Кровельные работы любой сложности', bg: '1', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Внутренние и наружные отделочные работы', bg: '2', decs: 'Утепление фасадов, стяжка клеем, покраска, штукатурка песчаная, гипсовая'}, {title: 'Устройство коммуникаций', bg: '3', decs: 'водоснабжение, отопление, канализация, освещение'}, {title: 'Стяжка пола чистовая', bg: '4', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Устройство местной канализации', bg: '5', decs: 'Без откачки до 15 лет'}, {title: 'Благоустройство территории', bg: '6', decs: 'Проектирование, ландшафтный дизайн, посадка растений, системы полива, укладка тротуарной плитки'}, {title: 'Монтаж заборов, калиток, ворот', bg: '7', decs: 'Откатные, распашные'}, {title: 'Сдача в аренду строительной техники', bg: '8', decs: 'Перечисление техники, списком через запятую'}, ]
-                    .slider__item
-                        .services__item(style="background-image: url('../img/services_"+item.bg+".webp')")
-                            .services__content
-                                .services__top
-                                    .services__title
-                                        span Кровельные работы
-                                        br 
-                                        span любой сложности
-                                .services__bottom
-                                    .services__desc
-                                        span=item.decs
-                                    .services__action
-                                        a(href="#").btn Оставить заявку
-                                        a.services__link(href="#") Скачать прайс
+    //- section#services.services.section
+    //-     .container_center
+    //-         h2.section__title 
+    //-             span Оказываем <b>полный спектр услуг</b> в строительстве
+    //- 
+    //-         .slider__arrows
+    //-         .slider.js-slider
+    //-             each item in [ {title: 'Кровельные работы любой сложности', bg: '1', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Внутренние и наружные отделочные работы', bg: '2', decs: 'Утепление фасадов, стяжка клеем, покраска, штукатурка песчаная, гипсовая'}, {title: 'Устройство коммуникаций', bg: '3', decs: 'водоснабжение, отопление, канализация, освещение'}, {title: 'Стяжка пола чистовая', bg: '4', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Устройство местной канализации', bg: '5', decs: 'Без откачки до 15 лет'}, {title: 'Благоустройство территории', bg: '6', decs: 'Проектирование, ландшафтный дизайн, посадка растений, системы полива, укладка тротуарной плитки'}, {title: 'Монтаж заборов, калиток, ворот', bg: '7', decs: 'Откатные, распашные'}, {title: 'Сдача в аренду строительной техники', bg: '8', decs: 'Перечисление техники, списком через запятую'}, ]
+    //-                 .slider__item
+    //-                     .services__item(style="background-image: url('../img/services_"+item.bg+".webp')")
+    //-                         .services__content
+    //-                             .services__top
+    //-                                 .services__title
+    //-                                     span Кровельные работы
+    //-                                     br 
+    //-                                     span любой сложности
+    //-                             .services__bottom
+    //-                                 .services__desc
+    //-                                     span=item.decs
+    //-                                 .services__action
+    //-                                     a(href="#").btn Оставить заявку
+    //-                                     a.services__link(href="#") Скачать прайс
 
     // end services
 
     // begin sidebar
-    #sidebar.sidebar
-        .sidebar__toggle
-            i.icon-close
-        .sidebar__list
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-head
-                    .sidebar__text
-                        span Оставить заявку
-
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-price_2
-                    .sidebar__text
-                        span Скачать прайс
-
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-viber
-                    .sidebar__text
-                        span Написать в Viber
+    //- #sidebar.sidebar
+    //-     .sidebar__toggle
+    //-         i.icon-close
+    //-     .sidebar__list
+    //-         a(href="#").sidebar__item
+    //-             .sidebar__content
+    //-                 .sidebar__icon
+    //-                     i.icon-head
+    //-                 .sidebar__text
+    //-                     span Оставить заявку
+    //- 
+    //-         a(href="#").sidebar__item
+    //-             .sidebar__content
+    //-                 .sidebar__icon
+    //-                     i.icon-price_2
+    //-                 .sidebar__text
+    //-                     span Скачать прайс
+    //- 
+    //-         a(href="#").sidebar__item
+    //-             .sidebar__content
+    //-                 .sidebar__icon
+    //-                     i.icon-viber
+    //-                 .sidebar__text
+    //-                     span Написать в Viber
 
     // end sidebar
 
     // begin testbtn
-    section#testbtn.testbtn.section
-        .container_center
-            h2.section__title testbtn
-            .testbtn__content
-                a(href="#").btn.btn_upper Оставить заявку
-                br
-                br
-                a(href="#").btn Оставить заявку
-                br
-                br
-                a(href="#").btn.btn_reverse Оставить заявку
-                br
-                br
-                a(href="#").btn.btn_lg
-                    span Оставить заявку на расчет стоимости
-
-                br
-                br
-                a(href="#").btn.btn_lg
-                    span Получить прайс сейчас
+    //- section#testbtn.testbtn.section
+    //-     .container_center
+    //-         h2.section__title testbtn
+    //-         .testbtn__content
+    //-             a(href="#").btn.btn_upper Оставить заявку
+    //-             br
+    //-             br
+    //-             a(href="#").btn Оставить заявку
+    //-             br
+    //-             br
+    //-             a(href="#").btn.btn_reverse Оставить заявку
+    //-             br
+    //-             br
+    //-             a(href="#").btn.btn_lg
+    //-                 span Оставить заявку на расчет стоимости
+    //- 
+    //-             br
+    //-             br
+    //-             a(href="#").btn.btn_lg
+    //-                 span Получить прайс сейчас
 
     // end testbtn
 
 
 
     // begin testingrequisition
-    section#testingrequisition.testingrequisition.section
-        .container_center
-            h2.section__title  requisition
-            .testingrequisition__content
-
-
-                // Button trigger modal requisition
-                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition") Click to open modal
-                // Begin Modal requisition
-                .modal.fade.requisition#requisition
-                    .modal-dialog
-                        .modal-content
-                            a(href="#" class="modal-close" data-dismiss="modal")
-                                i.icon-close
-
-                            .modal-header
-                                .modal-title 
-                                    span Оставьте заявку на <b>расчет стоимости</b>
-                                .modal-subtitle
-                                    span Только телефон и мы в деле. Перезвоним через пару минут
-                                .modal-select
-                                    span Выберите из списка нужную услугу:
-                            .modal-body
-                                form.form(action="send.php")
-                                    //- из какой формы на сайте
-                                    input(type="hidden" name="subject" value="Oставить заявку")
-                                    //- проверка спама
-                                    input(type="hidden" name="notspam" value="")
-
-                                    .form__row
-                                        select.select(data-placeholder="Строительство дома" name="select")
-                                            option(value="")
-                                            option(value="Строительство дома") Строительство дома
-                                            option(value="Строительство дома 2") Строительство дома 2
-                                            option(value="Строительство дома 3") Строительство дома 3
-                                            option(value="Строительство дома 4") Строительство дома 4
-
-                                    .form__row
-                                        input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
-
-                                    .form__row
-                                        button.btn#btn_didisabled_js(type="submit")
-                                            span Оставить заявку
-                                    .form__row
-                                        .form__privacy
-                                            label.form__check
-                                                input#check_checked(type="checkbox" checked="checked")
-                                                span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
-                // End modal requisition
+    //- section#testingrequisition.testingrequisition.section
+    //-     .container_center
+    //-         h2.section__title  requisition
+    //-         .testingrequisition__content
+    //- 
+    //- 
+    //-             // Button trigger modal requisition
+    //-             button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition") Click to open modal
+    //-             // Begin Modal requisition
+    //-             .modal.fade.requisition#requisition
+    //-                 .modal-dialog
+    //-                     .modal-content
+    //-                         a(href="#" class="modal-close" data-dismiss="modal")
+    //-                             i.icon-close
+    //- 
+    //-                         .modal-header
+    //-                             .modal-title 
+    //-                                 span Оставьте заявку на <b>расчет стоимости</b>
+    //-                             .modal-subtitle
+    //-                                 span Только телефон и мы в деле. Перезвоним через пару минут
+    //-                             .modal-select
+    //-                                 span Выберите из списка нужную услугу:
+    //-                         .modal-body
+    //-                             form.form(action="send.php")
+    //-                                 //- из какой формы на сайте
+    //-                                 input(type="hidden" name="subject" value="Oставить заявку")
+    //-                                 //- проверка спама
+    //-                                 input(type="hidden" name="notspam" value="")
+    //- 
+    //-                                 .form__row
+    //-                                     select.select(data-placeholder="Строительство дома" name="select")
+    //-                                         option(value="")
+    //-                                         option(value="Строительство дома") Строительство дома
+    //-                                         option(value="Строительство дома 2") Строительство дома 2
+    //-                                         option(value="Строительство дома 3") Строительство дома 3
+    //-                                         option(value="Строительство дома 4") Строительство дома 4
+    //- 
+    //-                                 .form__row
+    //-                                     input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
+    //- 
+    //-                                 .form__row
+    //-                                     button.btn#btn_didisabled_js(type="submit")
+    //-                                         span Оставить заявку
+    //-                                 .form__row
+    //-                                     .form__privacy
+    //-                                         label.form__check
+    //-                                             input#check_checked(type="checkbox" checked="checked")
+    //-                                             span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
+    // End modal requisition
 
 
     // end testingrequisition
 
-    // begin first
-    //- section#first.first.section
-    //-     .container_center
-    //-         h2.section__title first section title
-    //-         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    //- 
-    //-         p
-    //-             i.icon-home
-    //-                 i.icon-clock2
-    //-                     i.icon-calendar
-    //-                         i.icon-printer
-    // end first
+
 
 
     // begin form
-    section#form.form.section
-        .container_center
-            .form__content
-                h1.form__title Подать заявку на лизинг
-                i.icon_close    
-                form.form.form_grid(action="send.php")
-                    //- из какой формы на сайте
-                    input(type="hidden" name="subject" value="форма в футоре")
-                    //- проверка спама
-                    input(type="hidden" name="notspam" value="")
-                    .form__row
-                        input(type="text", required placeholder="Предмет лизинга*")
-                    .form__row
-                        input(type="number", placeholder="ИНН")
-                    .form__row
-                        input(type="number", placeholder="Стоимость")
-                    .form__row
-                        input(type="text", placeholder="Контактное лицо")
-                    .form__row
-                        input(type="number", placeholder="Колличество")
-                    .form__row
-                        input(type="text", required placeholder="Телефон*")
-                    .form__row
-                        input(type="number", placeholder="Аванс")
-                    .form__label
-                    .form__row
-                        select.select(data-placeholder="Выбор")
-                            option(value="")
-                            option(value="Значение 1") Значение 1
-                            option(value="Значение 2") Значение 2
-                            option(value="Значение 3") Значение 3
-                            option(value="Значение 4") Значение 4
-                    .form__row
-                        input(type="email", placeholder="E-mail")
-                    .form__row
-                        input(type="text", placeholder="Местонахождение")
-                    .form__row.form__row_full
-                        textarea(type="text", placeholder="Дополнительная информация")
-                    .form__row.form__row_full
-                        .form__grup
-                            label.form__check
-                                input(type="radio" name="test" checked="checked" value="test")
-                                span radio 1
-                            label.form__check
-                                input(type="radio" name="test" value="test_2")
-                                span radio 2
-
-                    .form__row
-                        span.form__text Поля, помеченные *, обязательны к заполнения
-                    .form__row
-                        .button
-                            button.btn#btn_didisabled_js(type="submit") Отправить
-                    .form__row.form__row_full
-                        .form__privacy
-                            label.form__check
-                                input#check_checked(type="checkbox" checked="checked")
-                                span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
+    //- section#form.form.section
+    //-     .container_center
+    //-         .form__content
+    //-             h1.form__title Подать заявку на лизинг
+    //-             i.icon_close    
+    //-             form.form.form_grid(action="send.php")
+    //-                 //- из какой формы на сайте
+    //-                 input(type="hidden" name="subject" value="форма в футоре")
+    //-                 //- проверка спама
+    //-                 input(type="hidden" name="notspam" value="")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Предмет лизинга*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="ИНН")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Стоимость")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Контактное лицо")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Колличество")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Телефон*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Аванс")
+    //-                 .form__label
+    //-                 .form__row
+    //-                     select.select(data-placeholder="Выбор")
+    //-                         option(value="")
+    //-                         option(value="Значение 1") Значение 1
+    //-                         option(value="Значение 2") Значение 2
+    //-                         option(value="Значение 3") Значение 3
+    //-                         option(value="Значение 4") Значение 4
+    //-                 .form__row
+    //-                     input(type="email", placeholder="E-mail")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Местонахождение")
+    //-                 .form__row.form__row_full
+    //-                     textarea(type="text", placeholder="Дополнительная информация")
+    //-                 .form__row.form__row_full
+    //-                     .form__grup
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" checked="checked" value="test")
+    //-                             span radio 1
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" value="test_2")
+    //-                             span radio 2
+    //- 
+    //-                 .form__row
+    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
+    //-                 .form__row
+    //-                     .button
+    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
+    //-                 .form__row.form__row_full
+    //-                     .form__privacy
+    //-                         label.form__check
+    //-                             input#check_checked(type="checkbox" checked="checked")
+    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
     // end form
     // Button trigger modal info
     //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
@@ -330,16 +319,16 @@ block content
     // end dropPreview
 
     // begin sliderPreview
-    section#sliderPreview.sliderPreview.section
-        .container_center
-            h2.section__title slider Preview
-            .sliderPreview__content
-
-                .slider.js-slider
-                    each item in [1, 2, 3, 4]
-                        .slider__item
-                            .content
-                                h1=item
+    //- section#sliderPreview.sliderPreview.section
+    //-     .container_center
+    //-         h2.section__title slider Preview
+    //-         .sliderPreview__content
+    //- 
+    //-             .slider.js-slider
+    //-                 each item in [1, 2, 3, 4]
+    //-                     .slider__item
+    //-                         .content
+    //-                             h1=item
 
 
     // end sliderPreview

@@ -1,25 +1,65 @@
 header.header
     .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+        .header__top
+            .header__logo
+                a.logo(href="/")
+                    img(src="../img/logo.png")
+
+            .header__info.desktop
+                span ООО “Артадитакс” <b>Строительные работы</b> любой сложности под ключ
+            .header__location
+                .location
+                    .location__icon
+                        i.icon-map
+                    .location__content
+                        .location__label
+                            span Адрес офиса:
+                        .location__text
+                            span г. Брест, ул.Карьерная, 10 А
+
+            .header__phone
+                .phone
+                    .phone__label
+                        span Звоните Пн-Пт: 9:00 - 18:00
+                    .phone__list
+                        .phone__item
+                            a(href="tel:+375298075009").phone__link +375 (29) 807-50-09
+                        .phone__item
+                            a(href="tel:+375298071188").phone__link +375 (29) 807-11-88
+        .header__bottom
+
+            // begin navbar
+            nav.navbar#navbar
+                ul.navbar__list
+                    li.navbar__item.current
+                        a.navbar__link(href="#") Главная
+
+                    each item in ['каталог', 'Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
+                        li.navbar__item
+                            a.navbar__link(href="#")=item
+
+            // end navbar
+
+            // begin header__action
+            .header__action
+                .messenger
+                    .messenger__label
+                        span.desktop Задайте вопрос, <b>мы онлайн</b>
+                        span.mobile Спрашивайте онлайн
+                    .messenger__list
+                        .messenger__item
+                            a(href="viber://chat?number=%2B375298075009" target="_blank").messenger__link
+                                i.icon-viber
+                        .messenger__item
+                            a(href="https://wa.me/+375298075009" target="_blank").messenger__link
+                                i.icon-whatsapp
+                        .messenger__item
+                            a(href="https://telegram.im/plahotin_s" target="_blank").messenger__link
+                                i.icon-telegram
+
+                .button
+                    a(href="#").btn.btn_upper Оставить заявку
+
+            // end header__action
 
         .header__toggle
-
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
