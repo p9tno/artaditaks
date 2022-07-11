@@ -2,12 +2,73 @@ extends layout/layout.pug
 
 block content
 
+    // begin firstScreen
+    section#firstScreen.firstScreen.section
+        .container_center
+            h2.section__title 
+                span Строительство <b>индивидуальных жилых домов</b> "под ключ в Бресте и области"
+            .firstScreen__desc
+                span От разбивки участка под заливку фундамента до ввода объекта в эксплуатацию
+
+            .firstScreen__bullets
+                .bullets
+                    .bullets__item
+                        .bullets__icon
+                            i.icon-price
+                        .bullets__content
+                            span <b>Фиксируем цену в договоре</b> и разбиваем строительство на этапы
+
+                    .bullets__item
+                        .bullets__icon
+                            i.icon-tool
+                        .bullets__content
+                            span <b>Закупаем материалы сами</b> или работаем с материалами заказчика
+
+
+                    .bullets__item
+                        .bullets__icon
+                            i.icon-advise
+                        .bullets__content
+                            span <b>Советуем и подсказываем</b> как лучше
+
+            .firstScreen__action
+                .firstScreen__btn
+                    a(href="#").btn.btn_lg
+                        span Оставить заявку на расчет стоимости
+                .firstScreen__info
+                    span <b>Перезвоним и проконсультируем</b> через 5 минут
+    // end firstScreen
+
+    // begin services
+    section#services.services.section
+        .container_center
+            h2.section__title 
+                span Оказываем <b>полный спектр услуг</b> в строительстве
+
+            .slider__arrows
+            .slider.js-slider
+                each item in [ {title: 'Кровельные работы любой сложности', bg: '1', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Внутренние и наружные отделочные работы', bg: '2', decs: 'Утепление фасадов, стяжка клеем, покраска, штукатурка песчаная, гипсовая'}, {title: 'Устройство коммуникаций', bg: '3', decs: 'водоснабжение, отопление, канализация, освещение'}, {title: 'Стяжка пола чистовая', bg: '4', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Устройство местной канализации', bg: '5', decs: 'Без откачки до 15 лет'}, {title: 'Благоустройство территории', bg: '6', decs: 'Проектирование, ландшафтный дизайн, посадка растений, системы полива, укладка тротуарной плитки'}, {title: 'Монтаж заборов, калиток, ворот', bg: '7', decs: 'Откатные, распашные'}, {title: 'Сдача в аренду строительной техники', bg: '8', decs: 'Перечисление техники, списком через запятую'}, ]
+                    .slider__item
+                        .services__item(style="background-image: url('../img/services_"+item.bg+".webp')")
+                            .services__content
+                                .services__top
+                                    .services__title
+                                        span Кровельные работы
+                                        br 
+                                        span любой сложности
+                                .services__bottom
+                                    .services__desc
+                                        span=item.decs
+                                    .services__action
+                                        a(href="#").btn Оставить заявку
+                                        a.services__link(href="#") Скачать прайс
+
+    // end services
+
     // begin sidebar
     #sidebar.sidebar
-
         .sidebar__toggle
             i.icon-close
-
         .sidebar__list
             a(href="#").sidebar__item
                 .sidebar__content
@@ -25,12 +86,10 @@ block content
 
             a(href="#").sidebar__item
                 .sidebar__content
-                    .sidebar__icon.sidebar__icon_circle
+                    .sidebar__icon
                         i.icon-viber
                     .sidebar__text
                         span Написать в Viber
-
-
 
     // end sidebar
 
@@ -56,24 +115,17 @@ block content
                 a(href="#").btn.btn_lg
                     span Получить прайс сейчас
 
-
-
     // end testbtn
 
-    // begin test
-    section#test.test.section
-        .container_center
-            h2.section__title 
-            .test__content
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    // end test
 
     // begin testingrequisition
     section#testingrequisition.testingrequisition.section
         .container_center
             h2.section__title  requisition
             .testingrequisition__content
+
+
                 // Button trigger modal requisition
                 button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition") Click to open modal
                 // Begin Modal requisition

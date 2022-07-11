@@ -55,6 +55,12 @@
 
         &:last-child {
             margin-bottom: 0;
+            background: #746FBB;
+
+            i {
+                font-size: 1.659em;
+            }
+
         }
 
         position: relative;
@@ -72,7 +78,7 @@
             bottom: 0;
             right: -0.5em;
             width: 0.5em;
-            background-color: $color_warning;
+            background-color: inherit;
         }
 
     }
@@ -83,24 +89,24 @@
         }
         margin-bottom: 0.3125em;
 
-        &_circle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.625em;
-            height: 2.625em;
-            border-radius: 50%;
-
-            margin-bottom: 0.125em;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: $color_white;
-
-            i {
-                color: $color_warning;
-                font-size: 1.25em;
-            }
-        }
+        // &_circle {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     width: 2.625em;
+        //     height: 2.625em;
+        //     border-radius: 50%;
+        //
+        //     margin-bottom: 0.125em;
+        //     margin-left: auto;
+        //     margin-right: auto;
+        //     background-color: $color_white;
+        //
+        //     i {
+        //         color: $color_warning;
+        //         font-size: 1.25em;
+        //     }
+        // }
 
     }
 

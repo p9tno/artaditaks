@@ -144,10 +144,14 @@ $(document).ready(function() {
 
     $('.js-slider').slick({
         dots: true,
-        // prevArrow: '<i class="icon-left"></i>',
-        // nextArrow: '<i class="icon-right"></i>',
+        // autoplay: true,
+        // autoplaySpeed: 5000,
+        prevArrow: '<i class="icon-arrow_left"></i>',
+        nextArrow: '<i class="icon-arrow_right"></i>',
+
         speed: 1000,
         adaptiveHeight: true,
+        slidesToShow: 3,
         responsive: [
             {
                 breakpoint: 576,
