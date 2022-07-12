@@ -3,7 +3,7 @@ header.header
         .header__top
             .header__logo
                 a.logo(href="/")
-                    img(src="../img/logo.png")
+                    //- img(src="../img/logo.png")
 
             .header__info.desktop
                 span ООО “Артадитакс” <b>Строительные работы</b> любой сложности под ключ
@@ -34,7 +34,7 @@ header.header
                     li.navbar__item.current
                         a.navbar__link(href="#") Главная
 
-                    each item in ['каталог', 'Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
+                    each item in ['Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
                         li.navbar__item
                             a.navbar__link(href="#")=item
 
@@ -63,3 +63,4 @@ header.header
             // end header__action
 
         .header__toggle
+        .header__mobilbg

@@ -1,54 +1,97 @@
 .firstScreen {
     // background: #4d0708 url("../img/home-bg.png") center no-repeat;
     // background-size: cover;
-    background: url("../img/first_bg.webp") center no-repeat;
-    background-size: cover;
     color: $color_white;
 
-    padding-top: 20.3125em;
-    padding-bottom: 13.125em;
+    background: url("../img/first_bg_mob.webp") center no-repeat;
+    background-size: cover;
+    padding-top: 10.625em;
+    padding-bottom: 3.75em;
+
+    @media (min-width: 768px) {
+        background: url("../img/first_bg.webp") center no-repeat;
+        padding-top: 20.3125em;
+        padding-bottom: 13.125em;
+
+    }
 
     &__desc {
         text-align: center;
-        letter-spacing: 0.02em;
-        margin-bottom: 3.5em;
+        margin-bottom: 1.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 3.5em;
+            letter-spacing: 0.02em;
+        }
 
         span {
-            font-size: 1.875em;
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+            }
         }
     }
 
     &__bullets {
-        margin-bottom: 3.75em;
+        margin-bottom: 2.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 3.75em;
+        }
     }
 
     &__action {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    &__btn {}
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
 
     &__info {
         position: relative;
-        width: 10em;
-        margin-left: 2.125em;
+        width: 6.875em;
+        text-align: right;
+        line-height: 1;
+        margin-left: 8em;
+        margin-top: 1em;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            line-height: $main_line_height;
+            text-align: left;
+            width: 10em;
+            margin-left: 2.125em;
+
+        }
 
         span {
-            font-size: 0.875em;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 0.875em;
+            }
         }
 
         &:after {
             content: '';
-            position: absolute;
-            bottom: -2em;
-            left: -2em;
-            width: 9.0625em;
-            height: 2.625em;
-
             background: url("../img/long_arrow.svg") center no-repeat;
             background-size: cover;
+
+            position: absolute;
+            bottom: 0.25em;
+            left: -5.75em;
+            width: 6.9375em;
+            height: 2em;
+            transform: rotate(30deg);
+
+            @media (min-width: 768px) {
+                bottom: -2em;
+                left: -2em;
+                width: 9.0625em;
+                height: 2.625em;
+                transform: rotate(0);
+
+            }
 
         }
     }
@@ -57,34 +100,73 @@
 
 .bullets {
     display: flex;
-    justify-content: space-between;
-    width: 53.75em;
-    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+        justify-content: space-between;
+        width: 53.75em;
+        margin: 0 auto;
+
+    }
 
     &__item {
         text-align: center;
-        width: 13.5em;
+
+        @media (max-width: 767px) {
+            width: 50%;
+            margin-bottom: 1.5em;
+
+            &:last-child {
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            width: 13.5em;
+
+        }
     }
 
     &__icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 4.8125em;
-        height: 4.8125em;
         border-radius: 50%;
         background-color: $color_warning;
-        margin: auto auto 1.5em;
+        margin: auto auto 0.75em;
+        width: 3em;
+        height: 3em;
+
+        @media (min-width: 768px) {
+            margin: auto auto 1.5em;
+            width: 4.8125em;
+            height: 4.8125em;
+
+        }
 
         i {
-            font-size: 2em;
+            font-size: 1.25em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+            }
         }
 
     }
 
     &__content {
+        @media (max-width: 767px) {
+            width: 8.25em;
+            margin: 0 auto;
+            line-height: 1;
+        }
+
         span {
-            font-size: 1.125em;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+            }
         }
 
     }

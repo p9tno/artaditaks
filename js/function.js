@@ -44,7 +44,7 @@ $(document).ready(function() {
             // console.log('Показ меню');
             $('.header__bottom').toggleClass('header__bottom_open');
             $('.header__toggle').toggleClass('header__toggle_open');
-            // $('.nav_open_bg').toggleClass('nav_open_bg_open');
+            $('.header__mobilbg').toggleClass('header__mobilbg_open');
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
@@ -154,9 +154,10 @@ $(document).ready(function() {
         slidesToShow: 3,
         responsive: [
             {
-                breakpoint: 576,
+                breakpoint: 768,
                 settings: {
                     arrows:false,
+                    slidesToShow: 1,
                 }
             },
         ]
