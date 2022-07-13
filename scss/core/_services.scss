@@ -5,17 +5,10 @@
         background: center no-repeat;
         background-size: cover;
         height: 17.25em;
-        // width: 17.0625em;
-        /* 273/16 */
-        /* 276/16 */
 
         @media (min-width: 768px) {
             height: 31.25em;
         }
-
-        /* 506/16 */
-        // width: 31.625em;
-        /* 506/16 */
 
         border-radius: 1.125em;
 
@@ -56,11 +49,12 @@
 
     &__top {
         width: fit-content;
-        background: rgba(0, 0, 0, 0.38);
+        background: rgba(0, 0, 0, 0.5);
+        // background: rgba(0, 0, 0, 0.38);
 
         border-radius: 0.625em;
-        -webkit-backdrop-filter: blur(0.5em);
-        backdrop-filter: blur(0.5em);
+        // -webkit-backdrop-filter: blur(0.5em);
+        // backdrop-filter: blur(0.5em);
         padding: 0.707em 1.04em;
         margin: 0 auto;
 

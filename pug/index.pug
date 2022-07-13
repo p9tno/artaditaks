@@ -69,6 +69,50 @@ block content
 
     // end services
 
+    // begin priceList
+    section#priceList.priceList.section
+        .container_center
+            .priceList__content
+                h2.priceList__title Скачайте прайс-лист на все услуги в 1 клик
+                .priceList__desc Выберите куда вам удобнее отправить прайс?
+                .priceList__form
+                    form.form.form_grid(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="Скачать прайс лист")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            select.select(data-placeholder="Получить в Viber" name="select")
+                                option(value="")
+                                option(value="Получить в Viber") Получить в Viber
+                                option(value="Получить в Viber 2") Получить в Viber 2
+                                option(value="Получить в Viber 3") Получить в Viber 3
+                                option(value="Получить в Viber 4") Получить в Viber 4
+
+                        .form__row
+                            input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_lg#btn_didisabled_js(type="submit")
+                                span Получить прайс сейчас
+
+                        .form__row.form__row_full
+                            .form__privacy
+                                label.form__check
+                                    input#check_checked(type="checkbox" checked="checked")
+                                    span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
+
+                .priceList__pdf
+                    .pdf
+                        img(src="../img/pdf.svg")
+        .priceList__compass
+        .priceList__fon
+
+
+
+    // end priceList
+
     // begin sidebar
     #sidebar.sidebar.desktop
         .sidebar__toggle

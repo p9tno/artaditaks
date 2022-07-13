@@ -11,10 +11,11 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__content">
+          <!-- begin header__top-->
           <div class="header__top">
-            <div class="header__logo"><a class="logo" href="/"></a></div>
+            <div class="header__logo"><a class="logo" href="/"><img src="../img/logo.png"/></a></div>
             <div class="header__info desktop"><span>ООО “Артадитакс” <b>Строительные работы</b> любой сложности под ключ</span></div>
-            <div class="header__location">
+            <div class="header__location desktop">
               <div class="location">
                 <div class="location__icon"><i class="icon-map"></i></div>
                 <div class="location__content">
@@ -23,8 +24,19 @@
                 </div>
               </div>
             </div>
+            <div class="header__button desktop"><a class="btn btn_upper" href="#">Оставить заявку</a></div>
+            <div class="header__messenger desktop">
+              <div class="messenger">
+                <div class="messenger__label"><span>Задайте вопрос, <b>мы онлайн</b></span></div>
+                <div class="messenger__list">
+                  <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B375298075009" target="_blank"><i class="icon-viber"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+375298075009" target="_blank"><i class="icon-whatsapp"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="https://telegram.im/plahotin_s" target="_blank"><i class="icon-telegram"></i></a></div>
+                </div>
+              </div>
+            </div>
             <div class="header__phone">
-              <div class="phone">
+              <div class="phone phone_sm">
                 <div class="phone__label"><span>Звоните Пн-Пт: 9:00 - 18:00</span></div>
                 <div class="phone__list">
                   <div class="phone__item"><a class="phone__link" href="tel:+375298075009">+375 (29) 807-50-09</a></div>
@@ -33,8 +45,30 @@
               </div>
             </div>
           </div>
+          <!-- end header__top-->
+          <!-- begin header__bottom-->
           <div class="header__bottom">
-            <!-- begin navbar-->
+            <div class="header__openHead mobile">
+              <div class="header__logo"><a class="logo" href="/"><img src="../img/logo_open.png"/></a></div>
+              <div class="header__location">
+                <div class="location">
+                  <div class="location__icon"><i class="icon-map"></i></div>
+                  <div class="location__content">
+                    <div class="location__label"><span>Адрес офиса:</span></div>
+                    <div class="location__text"><span>г. Брест, ул.Карьерная, 10 А</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__phone header__phone_open">
+                <div class="phone">
+                  <div class="phone__label"><span>Звоните Пн-Пт: 9:00 - 18:00</span></div>
+                  <div class="phone__list">
+                    <div class="phone__item"><a class="phone__link" href="tel:+375298075009">+375 (29) 807-50-09</a></div>
+                    <div class="phone__item"><a class="phone__link" href="tel:+375298071188">+375 (29) 807-11-88</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <nav class="navbar" id="navbar">
               <ul class="navbar__list">
                 <li class="navbar__item current"><a class="navbar__link" href="#">Главная</a></li>
@@ -46,23 +80,19 @@
                 <li class="navbar__item"><a class="navbar__link" href="#">контакты</a></li>
               </ul>
             </nav>
-            <!-- end navbar-->
-            <!-- begin header__action-->
-            <div class="header__action">
+            <div class="header__messenger mobile">
               <div class="messenger">
-                <div class="messenger__label"><span class="desktop">Задайте вопрос, <b>мы онлайн</b></span><span class="mobile">Спрашивайте онлайн</span></div>
+                <div class="messenger__label"><span>Спрашивайте онлайн</span></div>
                 <div class="messenger__list">
                   <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B375298075009" target="_blank"><i class="icon-viber"></i></a></div>
                   <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+375298075009" target="_blank"><i class="icon-whatsapp"></i></a></div>
                   <div class="messenger__item"><a class="messenger__link" href="https://telegram.im/plahotin_s" target="_blank"><i class="icon-telegram"></i></a></div>
                 </div>
               </div>
-              <div class="button"><a class="btn btn_upper" href="#">Оставить заявку</a></div>
             </div>
-            <!-- end header__action-->
           </div>
+          <!-- end header__bottom-->
           <div class="header__toggle"></div>
-          <div class="header__mobilbg"></div>
         </div>
       </header>
       <main class="main_content">
@@ -210,6 +240,49 @@
           </div>
         </section>
         <!-- end services-->
+        <!-- begin priceList-->
+        <section class="priceList section" id="priceList">
+          <div class="container_center">
+            <div class="priceList__content">
+              <h2 class="priceList__title">Скачайте прайс-лист на все услуги в 1 клик</h2>
+              <div class="priceList__desc">Выберите куда вам удобнее отправить прайс?</div>
+              <div class="priceList__form">
+                <form class="form form_grid" action="send.php">
+                  <input type="hidden" name="subject" value="Скачать прайс лист"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <select class="select" data-placeholder="Получить в Viber" name="select">
+                      <option value=""></option>
+                      <option value="Получить в Viber">Получить в Viber</option>
+                      <option value="Получить в Viber 2">Получить в Viber 2</option>
+                      <option value="Получить в Viber 3">Получить в Viber 3</option>
+                      <option value="Получить в Viber 4">Получить в Viber 4</option>
+                    </select>
+                  </div>
+                  <div class="form__row">
+                    <input type="tel" id="tel" name="tel" required="required" placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_lg" id="btn_didisabled_js" type="submit"><span>Получить прайс сейчас</span></button>
+                  </div>
+                  <div class="form__row form__row_full">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input id="check_checked" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="priceList__pdf">
+                <div class="pdf"><img src="../img/pdf.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="priceList__compass"></div>
+          <div class="priceList__fon"></div>
+        </section>
+        <!-- end priceList-->
         <!-- begin sidebar-->
         <div class="sidebar desktop" id="sidebar">
           <div class="sidebar__toggle"><i class="icon-close"></i></div>

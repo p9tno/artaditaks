@@ -1,13 +1,14 @@
 header.header
     .header__content
+        // begin header__top
         .header__top
             .header__logo
                 a.logo(href="/")
-                    //- img(src="../img/logo.png")
+                    img(src="../img/logo.png")
 
             .header__info.desktop
                 span ООО “Артадитакс” <b>Строительные работы</b> любой сложности под ключ
-            .header__location
+            .header__location.desktop
                 .location
                     .location__icon
                         i.icon-map
@@ -17,35 +18,13 @@ header.header
                         .location__text
                             span г. Брест, ул.Карьерная, 10 А
 
-            .header__phone
-                .phone
-                    .phone__label
-                        span Звоните Пн-Пт: 9:00 - 18:00
-                    .phone__list
-                        .phone__item
-                            a(href="tel:+375298075009").phone__link +375 (29) 807-50-09
-                        .phone__item
-                            a(href="tel:+375298071188").phone__link +375 (29) 807-11-88
-        .header__bottom
+            .header__button.desktop
+                a(href="#").btn.btn_upper Оставить заявку
 
-            // begin navbar
-            nav.navbar#navbar
-                ul.navbar__list
-                    li.navbar__item.current
-                        a.navbar__link(href="#") Главная
-
-                    each item in ['Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
-                        li.navbar__item
-                            a.navbar__link(href="#")=item
-
-            // end navbar
-
-            // begin header__action
-            .header__action
+            .header__messenger.desktop
                 .messenger
                     .messenger__label
-                        span.desktop Задайте вопрос, <b>мы онлайн</b>
-                        span.mobile Спрашивайте онлайн
+                        span Задайте вопрос, <b>мы онлайн</b>
                     .messenger__list
                         .messenger__item
                             a(href="viber://chat?number=%2B375298075009" target="_blank").messenger__link
@@ -57,10 +36,76 @@ header.header
                             a(href="https://telegram.im/plahotin_s" target="_blank").messenger__link
                                 i.icon-telegram
 
-                .button
-                    a(href="#").btn.btn_upper Оставить заявку
+            .header__phone
+                .phone.phone_sm
+                    .phone__label
+                        span Звоните Пн-Пт: 9:00 - 18:00
+                    .phone__list
+                        .phone__item
+                            a(href="tel:+375298075009").phone__link +375 (29) 807-50-09
+                        .phone__item
+                            a(href="tel:+375298071188").phone__link +375 (29) 807-11-88
+        // end header__top
 
-            // end header__action
+        // begin header__bottom
+        .header__bottom
+            .header__openHead.mobile
+
+                .header__logo
+                    a.logo(href="/")
+                        img(src="../img/logo_open.png")
+
+                .header__location
+                    .location
+                        .location__icon
+                            i.icon-map
+                        .location__content
+                            .location__label
+                                span Адрес офиса:
+                            .location__text
+                                span г. Брест, ул.Карьерная, 10 А
+
+                .header__phone.header__phone_open
+                    .phone
+                        .phone__label
+                            span Звоните Пн-Пт: 9:00 - 18:00
+                        .phone__list
+                            .phone__item
+                                a(href="tel:+375298075009").phone__link +375 (29) 807-50-09
+                            .phone__item
+                                a(href="tel:+375298071188").phone__link +375 (29) 807-11-88
+
+            nav.navbar#navbar
+                ul.navbar__list
+                    li.navbar__item.current
+                        a.navbar__link(href="#") Главная
+
+                    each item in ['Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
+                        li.navbar__item
+                            a.navbar__link(href="#")=item
+
+            .header__messenger.mobile
+                .messenger
+                    .messenger__label
+                        span Спрашивайте онлайн
+                    .messenger__list
+                        .messenger__item
+                            a(href="viber://chat?number=%2B375298075009" target="_blank").messenger__link
+                                i.icon-viber
+                        .messenger__item
+                            a(href="https://wa.me/+375298075009" target="_blank").messenger__link
+                                i.icon-whatsapp
+                        .messenger__item
+                            a(href="https://telegram.im/plahotin_s" target="_blank").messenger__link
+                                i.icon-telegram
+
+
+
+
+
+        // end header__bottom
+
+
 
         .header__toggle
-        .header__mobilbg
+        //- .header__mobilbg

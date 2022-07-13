@@ -2,20 +2,24 @@
     .sidebar {
         position: fixed;
         top: 35%;
-        // transform: translateY(-50%);
         right: 0;
 
         &__toggle {
-            text-align: center;
-            margin-bottom: 1.125em;
-            width: 6.25em;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.0625em;
+            height: 2.0625em;
+            background-color: $color_warning;
+            border-radius: 50%;
+            margin-bottom: 1.5em;
+            margin-right: 1.875em;
             cursor: pointer;
 
             i {
                 display: inline-block;
-                font-size: 1.625em;
-                color: $color_warning;
+                font-size: 0.625em;
+                color: $color_white;
                 transform: rotate(0deg);
                 transition: transform 0.3s;
             }
