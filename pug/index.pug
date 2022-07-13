@@ -33,7 +33,7 @@ block content
 
             .firstScreen__action
                 .firstScreen__btn
-                    a(href="#").btn.btn_lg
+                    a(href="#").btn.btn_lg.requisition_js
                         span Оставить заявку на расчет стоимости
                 .firstScreen__info
                     span <b>Перезвоним и проконсультируем</b> через 5 минут
@@ -42,6 +42,9 @@ block content
     // begin services
     section#services.services.section
         .container_center
+            .services__arrow
+                //- <i class="icon-arrow_left"></i>
+                //- <i class="icon-arrow_right"></i>
             h2.section__title 
                 span Оказываем <b>полный спектр услуг</b> в строительстве
             .slider-info.mobile
@@ -71,10 +74,13 @@ block content
 
     // begin priceList
     section#priceList.priceList.section
+        .priceList__fon
         .container_center
             .priceList__content
-                h2.priceList__title Скачайте прайс-лист на все услуги в 1 клик
-                .priceList__desc Выберите куда вам удобнее отправить прайс?
+                h2.priceList__title 
+                    span <b>Скачайте<br> прайс-лист</b> на все услуги в 1 клик
+                .priceList__desc
+                    span Выберите куда вам удобнее отправить прайс?
                 .priceList__form
                     form.form.form_grid(action="send.php")
                         //- из какой формы на сайте
@@ -85,61 +91,58 @@ block content
                         .form__row
                             select.select(data-placeholder="Получить в Viber" name="select")
                                 option(value="")
-                                option(value="Получить в Viber") Получить в Viber
-                                option(value="Получить в Viber 2") Получить в Viber 2
-                                option(value="Получить в Viber 3") Получить в Viber 3
-                                option(value="Получить в Viber 4") Получить в Viber 4
+                                option(value="Viber") Получить в Viber
+                                option(value="Telegram") Получить в Telegram
+                                option(value="whatsapp") Получить в Whatsapp
 
                         .form__row
                             input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
 
                         .form__row
-                            button.btn.btn_lg#btn_didisabled_js(type="submit")
+                            button.btn.btn_didisabled_js(type="submit")
                                 span Получить прайс сейчас
 
                         .form__row.form__row_full
                             .form__privacy
                                 label.form__check
-                                    input#check_checked(type="checkbox" checked="checked")
+                                    input.check_checked_js(type="checkbox" checked="checked")
                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
 
                 .priceList__pdf
                     .pdf
                         img(src="../img/pdf.svg")
-        .priceList__compass
-        .priceList__fon
 
-
+        .priceList__compass.desktop
 
     // end priceList
 
-    // begin sidebar
-    #sidebar.sidebar.desktop
-        .sidebar__toggle
-            i.icon-close
-        .sidebar__list
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-head
-                    .sidebar__text
-                        span Оставить заявку
+    // begin house
+    section#house.house.section
+        .container_center
+            h2.section__title 
+                span <b>Построили</b> 31 дом под ключ в Бресте
+            .house__desc 
+                span От разбивки участка до новоселья
+            .house__content
+                each item in [1,2,3,4]
 
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-price_2
-                    .sidebar__text
-                        span Скачать прайс
+                    .house__item
+                        .house__gallery
+                            .gallery
+                                each item in [1,2,3,4,5]
+                                    .gallery__item
+                        .house__title
+                            span Название работы
+                        .house__subtitle
+                            span Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же
 
-            a(href="#").sidebar__item
-                .sidebar__content
-                    .sidebar__icon
-                        i.icon-viber
-                    .sidebar__text
-                        span Написать в Viber
+                .house__action
+                    a(href="#") Показать еще работы
 
-    // end sidebar
+
+    // end house
+
+
 
     // begin testbtn
     //- section#testbtn.testbtn.section
@@ -167,204 +170,14 @@ block content
 
 
 
-    // begin testingrequisition
-    //- section#testingrequisition.testingrequisition.section
-    //-     .container_center
-    //-         h2.section__title  requisition
-    //-         .testingrequisition__content
-    //- 
-    //- 
-    //-             // Button trigger modal requisition
-    //-             button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition") Click to open modal
-    //-             // Begin Modal requisition
-    //-             .modal.fade.requisition#requisition
-    //-                 .modal-dialog
-    //-                     .modal-content
-    //-                         a(href="#" class="modal-close" data-dismiss="modal")
-    //-                             i.icon-close
-    //- 
-    //-                         .modal-header
-    //-                             .modal-title 
-    //-                                 span Оставьте заявку на <b>расчет стоимости</b>
-    //-                             .modal-subtitle
-    //-                                 span Только телефон и мы в деле. Перезвоним через пару минут
-    //-                             .modal-select
-    //-                                 span Выберите из списка нужную услугу:
-    //-                         .modal-body
-    //-                             form.form(action="send.php")
-    //-                                 //- из какой формы на сайте
-    //-                                 input(type="hidden" name="subject" value="Oставить заявку")
-    //-                                 //- проверка спама
-    //-                                 input(type="hidden" name="notspam" value="")
-    //- 
-    //-                                 .form__row
-    //-                                     select.select(data-placeholder="Строительство дома" name="select")
-    //-                                         option(value="")
-    //-                                         option(value="Строительство дома") Строительство дома
-    //-                                         option(value="Строительство дома 2") Строительство дома 2
-    //-                                         option(value="Строительство дома 3") Строительство дома 3
-    //-                                         option(value="Строительство дома 4") Строительство дома 4
-    //- 
-    //-                                 .form__row
-    //-                                     input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
-    //- 
-    //-                                 .form__row
-    //-                                     button.btn#btn_didisabled_js(type="submit")
-    //-                                         span Оставить заявку
-    //-                                 .form__row
-    //-                                     .form__privacy
-    //-                                         label.form__check
-    //-                                             input#check_checked(type="checkbox" checked="checked")
-    //-                                             span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
-    // End modal requisition
-
-
-    // end testingrequisition
 
 
 
 
-    // begin form
-    //- section#form.form.section
-    //-     .container_center
-    //-         .form__content
-    //-             h1.form__title Подать заявку на лизинг
-    //-             i.icon_close    
-    //-             form.form.form_grid(action="send.php")
-    //-                 //- из какой формы на сайте
-    //-                 input(type="hidden" name="subject" value="форма в футоре")
-    //-                 //- проверка спама
-    //-                 input(type="hidden" name="notspam" value="")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Предмет лизинга*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="ИНН")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Стоимость")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Контактное лицо")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Колличество")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Телефон*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Аванс")
-    //-                 .form__label
-    //-                 .form__row
-    //-                     select.select(data-placeholder="Выбор")
-    //-                         option(value="")
-    //-                         option(value="Значение 1") Значение 1
-    //-                         option(value="Значение 2") Значение 2
-    //-                         option(value="Значение 3") Значение 3
-    //-                         option(value="Значение 4") Значение 4
-    //-                 .form__row
-    //-                     input(type="email", placeholder="E-mail")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Местонахождение")
-    //-                 .form__row.form__row_full
-    //-                     textarea(type="text", placeholder="Дополнительная информация")
-    //-                 .form__row.form__row_full
-    //-                     .form__grup
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" checked="checked" value="test")
-    //-                             span radio 1
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" value="test_2")
-    //-                             span radio 2
-    //- 
-    //-                 .form__row
-    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
-    //-                 .form__row
-    //-                     .button
-    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
-    //-                 .form__row.form__row_full
-    //-                     .form__privacy
-    //-                         label.form__check
-    //-                             input#check_checked(type="checkbox" checked="checked")
-    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    // end form
-    // Button trigger modal info
-    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
-    // Begin Modal info
-    //- .modal.fade.info#info
-    //-     .modal-dialog
-    //-         .modal-content
-    //-             a(href="#" class="modal-close" data-dismiss="modal")
-    //-             .form__message
-    // End modal info
 
 
-    // begin faq
-    //- section#faq.faq.section
-    //-     .container_center
-    //-         h2.section__title F.A.Q.
-    //-         .faq__content
-    //-             .collapse(data-collapse-wrapper="")
-    //-                 .collapse__title.open(data-collapse="") 
-    //-                     span Вопрос о школе
-    //-                 // Добавить класс open для открытого состояния
-    //-                 .collapse__body.open(data-collapse-body="")
-    //-                     p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                     p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
-    //- 
-    //-             each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
-    //- 
-    //-                 .collapse(data-collapse-wrapper="")
-    //-                     .collapse__title(data-collapse="")
-    //-                         span= title
-    //-                     .collapse__body(data-collapse-body="")
-    //-                         p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                         p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
 
-    // end faq
 
-    // begin tabsPreview
-    //- section#tabsPreview.tabsPreview.section
-    //-     .container_center
-    //-         h2.section__title tabs Preview
-    //- 
-    //-         .tabsPreview__content
-    //-             .tabs
-    //-                 .tabs__item.active(data-tab="#plate-1") Item 1
-    //-                 .tabs__item(data-tab="#plate-2") Item 2
-    //-                 .tabs__item(data-tab="#plate-3") Item 3
-    //-                 .tabs__item(data-tab="#plate-4") Item 4
-    //- 
-    //-             .tabContent
-    //-                 .tabContent__item.active#plate-1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.
-    //-                 .tabContent__item#plate-2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.
-    //-                 .tabContent__item#plate-3  Lorem ipsum dolor sit amet.
-    //-                 .tabContent__item#plate-4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.
-
-    // end tabsPreview
-
-    // begin dropPreview
-    //- section#dropPreview.dropPreview.section
-    //-     .container_center
-    //-         h2.section__title drop Preview
-    //-         .dropPreview__content
-    //-             .drop
-    //-                 .drop__toggle Click me
-    //-                 .drop__list
-    //-                     .drop__item Item 1
-    //-                     .drop__item Item 2
-    //-                     .drop__item Item 3
-    //-                     .drop__item Item 4
-    //- 
-    //-             .drop
-    //-                 .drop__toggle Click me
-    //-                 .drop__list
-    //-                     .drop__item Item 1
-    //-                     .drop__item Item 2
-    //-                     .drop__item Item 3
-    //-                     .drop__item Item 4
-    //-         .content
-    //-             p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
-    //-             p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
-
-    // end dropPreview
 
     // begin sliderPreview
     //- section#sliderPreview.sliderPreview.section

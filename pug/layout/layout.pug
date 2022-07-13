@@ -7,6 +7,7 @@ html(lang="en")
         title Document
 
         //- link(rel="stylesheet", type="text/css", href="css/select2.min.css")
+        link(rel="stylesheet", type="text/css", href="css/fancybox.min.css")
         link(rel="stylesheet", type="text/css", href="css/style.css")
     body
         .wrapper
@@ -15,6 +16,14 @@ html(lang="en")
             main.main_content
                 block content
 
+                include sidebar.pug
             include footer.pug
+            include modal.pug
+
+            #preloader.preloader
+                .preloader__content
+                    .preloader__item.preloader__first
+                    .preloader__item.preloader__second
+                    .preloader__item.preloader__third
 
             include scripts.pug

@@ -17,16 +17,16 @@
             cursor: pointer;
 
             i {
-                display: inline-block;
+                // display: inline-block;
                 font-size: 0.625em;
                 color: $color_white;
                 transform: rotate(0deg);
-                transition: transform 0.3s;
+                transition: transform 0.1s;
             }
 
             &_hide {
                 i {
-                    transform: rotate(-135deg);
+                    transform: rotate(-45deg);
                 }
             }
 

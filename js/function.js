@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },700);
+
+            },700);
+        });
+    }
+    preloader();
+
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
@@ -31,8 +47,9 @@ $(document).ready(function() {
 
     $('.js-slider').slick({
         dots: true,
-        // autoplay: true,
-        // autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendArrows: $('.services__arrow'),
         prevArrow: '<i class="icon-arrow_left"></i>',
         nextArrow: '<i class="icon-arrow_right"></i>',
 
@@ -54,6 +71,14 @@ $(document).ready(function() {
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity
     });
+
+    function showModal() {
+        $('.requisition_js').on('click', function (e) {
+            e.preventDefault();
+             $('#requisition').modal('show');
+        });
+    }
+    showModal();
 
 
 

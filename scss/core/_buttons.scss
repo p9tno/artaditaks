@@ -64,8 +64,12 @@
 	}
 
 	&:disabled {
-		color: red;
+		background-color: darken($color_warning, 10%);
 		cursor: not-allowed;
+
+		&:before {
+			content: none;
+		}
 	}
 
 	&_lg {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
@@ -24,7 +25,7 @@
                 </div>
               </div>
             </div>
-            <div class="header__button desktop"><a class="btn btn_upper" href="#">Оставить заявку</a></div>
+            <div class="header__button desktop"><a class="btn btn_upper requisition_js" href="#">Оставить заявку</a></div>
             <div class="header__messenger desktop">
               <div class="messenger">
                 <div class="messenger__label"><span>Задайте вопрос, <b>мы онлайн</b></span></div>
@@ -118,7 +119,7 @@
               </div>
             </div>
             <div class="firstScreen__action">
-              <div class="firstScreen__btn"><a class="btn btn_lg" href="#"><span>Оставить заявку на расчет стоимости</span></a></div>
+              <div class="firstScreen__btn"><a class="btn btn_lg requisition_js" href="#"><span>Оставить заявку на расчет стоимости</span></a></div>
               <div class="firstScreen__info"><span><b>Перезвоним и проконсультируем</b> через 5 минут</span></div>
             </div>
           </div>
@@ -127,6 +128,7 @@
         <!-- begin services-->
         <section class="services section" id="services">
           <div class="container_center">
+            <div class="services__arrow"></div>
             <h2 class="section__title"> <span>Оказываем <b>полный спектр услуг</b> в строительстве</span></h2>
             <div class="slider-info mobile"><span>Передвигайте разделы влево/вправо</span>
               <div class="slider-info-img"><img src="../img/hand.svg"/></div>
@@ -242,10 +244,11 @@
         <!-- end services-->
         <!-- begin priceList-->
         <section class="priceList section" id="priceList">
+          <div class="priceList__fon"></div>
           <div class="container_center">
             <div class="priceList__content">
-              <h2 class="priceList__title">Скачайте прайс-лист на все услуги в 1 клик</h2>
-              <div class="priceList__desc">Выберите куда вам удобнее отправить прайс?</div>
+              <h2 class="priceList__title"> <span><b>Скачайте<br> прайс-лист</b> на все услуги в 1 клик</span></h2>
+              <div class="priceList__desc"><span>Выберите куда вам удобнее отправить прайс?</span></div>
               <div class="priceList__form">
                 <form class="form form_grid" action="send.php">
                   <input type="hidden" name="subject" value="Скачать прайс лист"/>
@@ -253,22 +256,21 @@
                   <div class="form__row">
                     <select class="select" data-placeholder="Получить в Viber" name="select">
                       <option value=""></option>
-                      <option value="Получить в Viber">Получить в Viber</option>
-                      <option value="Получить в Viber 2">Получить в Viber 2</option>
-                      <option value="Получить в Viber 3">Получить в Viber 3</option>
-                      <option value="Получить в Viber 4">Получить в Viber 4</option>
+                      <option value="Viber">Получить в Viber</option>
+                      <option value="Telegram">Получить в Telegram</option>
+                      <option value="whatsapp">Получить в Whatsapp</option>
                     </select>
                   </div>
                   <div class="form__row">
                     <input type="tel" id="tel" name="tel" required="required" placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _"/>
                   </div>
                   <div class="form__row">
-                    <button class="btn btn_lg" id="btn_didisabled_js" type="submit"><span>Получить прайс сейчас</span></button>
+                    <button class="btn btn_didisabled_js" type="submit"><span>Получить прайс сейчас</span></button>
                   </div>
                   <div class="form__row form__row_full">
                     <div class="form__privacy">
                       <label class="form__check">
-                        <input id="check_checked" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
                       </label>
                     </div>
                   </div>
@@ -279,14 +281,82 @@
               </div>
             </div>
           </div>
-          <div class="priceList__compass"></div>
-          <div class="priceList__fon"></div>
+          <div class="priceList__compass desktop"></div>
         </section>
         <!-- end priceList-->
+        <!-- begin house-->
+        <section class="house section" id="house">
+          <div class="container_center">
+            <h2 class="section__title"> <span><b>Построили</b> 31 дом под ключ в Бресте</span></h2>
+            <div class="house__desc"> <span>От разбивки участка до новоселья</span></div>
+            <div class="house__content">
+              <div class="house__item">
+                <div class="house__gallery">
+                  <div class="gallery">
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                  </div>
+                </div>
+                <div class="house__title"><span>Название работы</span></div>
+                <div class="house__subtitle"><span>Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же</span></div>
+              </div>
+              <div class="house__item">
+                <div class="house__gallery">
+                  <div class="gallery">
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                  </div>
+                </div>
+                <div class="house__title"><span>Название работы</span></div>
+                <div class="house__subtitle"><span>Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же</span></div>
+              </div>
+              <div class="house__item">
+                <div class="house__gallery">
+                  <div class="gallery">
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                  </div>
+                </div>
+                <div class="house__title"><span>Название работы</span></div>
+                <div class="house__subtitle"><span>Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же</span></div>
+              </div>
+              <div class="house__item">
+                <div class="house__gallery">
+                  <div class="gallery">
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                    <div class="gallery__item"></div>
+                  </div>
+                </div>
+                <div class="house__title"><span>Название работы</span></div>
+                <div class="house__subtitle"><span>Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же</span></div>
+              </div>
+              <div class="house__action"><a href="#">Показать еще работы</a></div>
+            </div>
+          </div>
+        </section>
+        <!-- end house-->
+        <!-- begin testbtn-->
+        <!-- end testbtn-->
+        <!-- begin sliderPreview-->
+        <!-- end sliderPreview-->
+        <!-- begin programsInfo-->
+        <!-- end programsInfo-->
         <!-- begin sidebar-->
         <div class="sidebar desktop" id="sidebar">
           <div class="sidebar__toggle"><i class="icon-close"></i></div>
-          <div class="sidebar__list"><a class="sidebar__item" href="#">
+          <div class="sidebar__list"><a class="sidebar__item requisition_js" href="#">
               <div class="sidebar__content">
                 <div class="sidebar__icon"><i class="icon-head"></i></div>
                 <div class="sidebar__text"><span>Оставить заявку</span></div>
@@ -301,36 +371,64 @@
               </div></a></div>
         </div>
         <!-- end sidebar-->
-        <!-- begin testbtn-->
-        <!-- end testbtn-->
-        <!-- begin testingrequisition-->
-        <!-- End modal requisition-->
-        <!-- end testingrequisition-->
-        <!-- begin form-->
-        <!-- end form-->
-        <!-- Button trigger modal info-->
-        <!-- Begin Modal info-->
-        <!-- End modal info-->
-        <!-- begin faq-->
-        <!-- end faq-->
-        <!-- begin tabsPreview-->
-        <!-- end tabsPreview-->
-        <!-- begin dropPreview-->
-        <!-- end dropPreview-->
-        <!-- begin sliderPreview-->
-        <!-- end sliderPreview-->
-        <!-- begin programsInfo-->
-        <!-- end programsInfo-->
       </main>
       <footer class="footer">
         <div class="footer__content">
           <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
         </div>
       </footer>
+      <!-- Begin Modal requisition-->
+      <div class="modal fade requisition" id="requisition">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+            <div class="modal-header">
+              <div class="modal-title"> <span>Оставьте заявку на <b>расчет стоимости</b></span></div>
+              <div class="modal-subtitle"><span>Только телефон и мы в деле. Перезвоним через пару минут</span></div>
+              <div class="modal-select"><span>Выберите из списка нужную услугу:</span></div>
+            </div>
+            <div class="modal-body">
+              <form class="form" action="send.php">
+                <input type="hidden" name="subject" value="Oставить заявку"/>
+                <input type="hidden" name="notspam" value=""/>
+                <div class="form__row">
+                  <select class="select" data-placeholder="Строительство дома" name="select">
+                    <option value=""></option>
+                    <option value="Строительство дома">Строительство дома</option>
+                    <option value="Строительство дома 2">Строительство дома 2</option>
+                    <option value="Строительство дома 3">Строительство дома 3</option>
+                  </select>
+                </div>
+                <div class="form__row">
+                  <input type="tel" id="tel" name="tel" required="required" placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _"/>
+                </div>
+                <div class="form__row">
+                  <button class="btn btn_didisabled_js" type="submit"><span>Оставить заявку</span></button>
+                </div>
+                <div class="form__row">
+                  <div class="form__privacy">
+                    <label class="form__check">
+                      <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal requisition-->
+      <div class="preloader" id="preloader">
+        <div class="preloader__content">
+          <div class="preloader__item preloader__first"></div>
+          <div class="preloader__item preloader__second"></div>
+          <div class="preloader__item preloader__third"></div>
+        </div>
+      </div>
       <script src="js/jquery.js"></script>
       <script src="js/form.js"></script>
       <script src="js/modal.js"></script>
       <script src="js/slick.min.js"></script>
+      <script src="js/fancybox.min.js"></script>
       <script src="js/select2.min.js"></script>
       <script src="js/function.js?undefined"></script>
     </div>

@@ -1,0 +1,41 @@
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#requisition") Click to open modal
+// Begin Modal requisition
+.modal.fade.requisition#requisition
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+                i.icon-close
+
+            .modal-header
+                .modal-title 
+                    span Оставьте заявку на <b>расчет стоимости</b>
+                .modal-subtitle
+                    span Только телефон и мы в деле. Перезвоним через пару минут
+                .modal-select
+                    span Выберите из списка нужную услугу:
+            .modal-body
+                form.form(action="send.php")
+                    //- из какой формы на сайте
+                    input(type="hidden" name="subject" value="Oставить заявку")
+                    //- проверка спама
+                    input(type="hidden" name="notspam" value="")
+
+                    .form__row
+                        select.select(data-placeholder="Строительство дома" name="select")
+                            option(value="")
+                            option(value="Строительство дома") Строительство дома
+                            option(value="Строительство дома 2") Строительство дома 2
+                            option(value="Строительство дома 3") Строительство дома 3
+
+                    .form__row
+                        input(type="tel" id="tel" name="tel" required placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _")
+
+                    .form__row
+                        button.btn.btn_didisabled_js(type="submit")
+                            span Оставить заявку
+                    .form__row
+                        .form__privacy
+                            label.form__check
+                                input.check_checked_js(type="checkbox" checked="checked")
+                                span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
+// End modal requisition

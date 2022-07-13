@@ -1,4 +1,10 @@
 .services {
+    position: relative;
+    padding-top: 5em;
+    @media (min-width: 768px) {
+        padding-top: 5.625em;
+    }
+
     &__item {
         position: relative;
         overflow: hidden;
@@ -148,6 +154,45 @@
             border-top: 1px dashed #EE6100;
 
         }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .services__arrow {
+        i {
+            position: absolute;
+            top: 30em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            background-color: $color_warning;
+            color: $color_white;
+            cursor: pointer;
+            z-index: 1;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($color_warning, 5%);
+            }
+
+            &:active {
+                background-color: darken($color_warning, 7%);
+            }
+
+        }
+
+        .icon-arrow_left {
+            left: 5em;
+        }
+
+        .icon-arrow_right {
+            right: 5em;
+        }
+
     }
 
 }
