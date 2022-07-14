@@ -105,19 +105,3 @@
 	}
 
 }
-
-@media (min-width: 768px) {
-	@keyframes flare {
-		0% {
-			left: -150%;
-		}
-
-		80% {
-			left: -150%;
-		}
-
-		100% {
-			left: 150%;
-		}
-	}
-}

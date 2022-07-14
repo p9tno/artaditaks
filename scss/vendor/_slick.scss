@@ -142,8 +142,6 @@
     }
 }
 
-@media (min-width: 768px) {}
-
 .slick-list {
     margin: 0 0 0 -1.6875em;
     padding: 0;
@@ -191,4 +189,31 @@
     }
 }
 
+@media (min-width: 768px) {
+    .slick-arrow {
+        position: absolute;
+        top: 30em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        background-color: $color_warning;
+        color: $color_white;
+        cursor: pointer;
+        z-index: 1;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($color_warning, 5%);
+        }
+
+        &:active {
+            background-color: darken($color_warning, 7%);
+        }
+
+    }
+
+}
 // END CUSTOM SLICK STYLE

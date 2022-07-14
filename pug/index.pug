@@ -42,16 +42,13 @@ block content
     // begin services
     section#services.services.section
         .container_center
-            .services__arrow
-                //- <i class="icon-arrow_left"></i>
-                //- <i class="icon-arrow_right"></i>
             h2.section__title 
                 span Оказываем <b>полный спектр услуг</b> в строительстве
             .slider-info.mobile
                 span Передвигайте разделы влево/вправо
                 .slider-info-img
                     img(src="../img/hand.svg")
-            //- .slider__arrows
+            .services__arrow
             .slider.js-slider
                 each item in [ {title: 'Кровельные работы любой сложности', bg: '1', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Внутренние и наружные отделочные работы', bg: '2', decs: 'Утепление фасадов, стяжка клеем, покраска, штукатурка песчаная, гипсовая'}, {title: 'Устройство коммуникаций', bg: '3', decs: 'водоснабжение, отопление, канализация, освещение'}, {title: 'Стяжка пола чистовая', bg: '4', decs: 'Подшива свесов кровли, водосточная система'}, {title: 'Устройство местной канализации', bg: '5', decs: 'Без откачки до 15 лет'}, {title: 'Благоустройство территории', bg: '6', decs: 'Проектирование, ландшафтный дизайн, посадка растений, системы полива, укладка тротуарной плитки'}, {title: 'Монтаж заборов, калиток, ворот', bg: '7', decs: 'Откатные, распашные'}, {title: 'Сдача в аренду строительной техники', bg: '8', decs: 'Перечисление техники, списком через запятую'}, ]
                     .slider__item
@@ -124,23 +121,121 @@ block content
             .house__desc 
                 span От разбивки участка до новоселья
             .house__content
-                each item in [1,2,3,4]
+                each item in [1,2,3,4,5,6,7,8,9,10,11,12]
 
-                    .house__item
+                    .house__item.itemForDataFancybox_js
                         .house__gallery
                             .gallery
-                                each item in [1,2,3,4,5]
+                                each item in [1,2,3,4,1]
                                     .gallery__item
+                                        a(href="../img/house_"+item+".webp" data-fancybox data-type="image")
+                                            img(src="../img/house_"+item+".webp")
                         .house__title
                             span Название работы
                         .house__subtitle
                             span Описание работы - цена - сроки - место выполнения (проведения) можно добавить еще и отзыв клиенты или видеообзор сюда же
 
-                .house__action
-                    a(href="#") Показать еще работы
+            .house__action
+                a(href="#").show_more_js Показать еще работы
+
+        .house__greens.desktop
 
 
     // end house
+
+    // begin orders
+    section#orders.orders.section
+        .container_center
+            h2.section__title 
+                span Релизовали <b>более 150 заказов</b> на разные строительные услуги
+
+            .slider-info.mobile
+                span Передвигайте разделы влево/вправо
+                .slider-info-img
+                    img(src="../img/hand.svg")
+
+            .orders__arrow
+            .slider.js-slider-orders
+                each item in [ {title: 'Заливка фундамента', img: '1', location: 'Брест, ул. Калиновая 64'}, {title: 'Устройство кровли', img: '2', location: 'Брест, ул. Вересковая 76'}, {title: 'Возведение коробки дома', img: '3', location: 'Брест, ул. Зеленая 34'}, {title: 'Заливка фундамента', img: '1', location: 'Брест, ул. Калиновая 64'},]
+
+                    .slider__item
+                        .orders__grid.itemForDataFancybox_js
+                            .orders__item
+                                a.orders__link(href="../img/orders_"+item.img+".webp" data-fancybox data-type="image")
+                                    img(src="../img/orders_"+item.img+".webp")
+                                    .orders__content
+                                        .orders__title
+                                            span=item.title
+                                        .orders__location
+                                            span=item.location
+
+                            each item in [1,2,3,1]
+                                .orders__item
+                                    a(href="../img/orders_"+item+".webp" data-fancybox data-type="image")
+                                        img(src="../img/orders_"+item+".webp")
+
+        .orders__bg
+
+    // end orders
+
+    // begin advantage
+    section#advantage.advantage.section
+        .container_center
+            .advantage__content
+                .advantage__left
+                    h2.section__title 
+                        span Вы <b>можете нам<br> довериться</b> и быть спокойны за качество и сроки
+
+                    .advantage__list
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_1.webp").desktop
+                                img(src="../img/advantage_mob_1.webp").mobile
+                            .advantage__text
+                                span <b>Экономим ваш бюджет.</b> Покупаем материалы по лучшим ценам у проверенных поставщиков
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_2.webp").desktop
+                                img(src="../img/advantage_mob_2.webp").mobile
+                            .advantage__text
+                                span <b>Составляем смету и фиксируем</b> финальную стоимость
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_3.webp").desktop
+                                img(src="../img/advantage_mob_3.webp").mobile
+                            .advantage__text
+                                span <b>Не дергаем вас по пустякам.</b> Сами закупаем, доставляем, разгружаем
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_4.webp").desktop
+                                img(src="../img/advantage_mob_4.webp").mobile
+                            .advantage__text
+                                span <b>Собственная спец техника.</b> Вам не нужно беспокоиться - все берем на себя
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_5.webp").desktop
+                                img(src="../img/advantage_mob_5.webp").mobile
+                            .advantage__text
+                                span <b>Используем ваш материал при желании/наличии</b> или можем закупать сами
+                        .advantage__item
+                            .advantage__img
+                                img(src="../img/advantage_6.webp").desktop
+                                img(src="../img/advantage_mob_6.webp").mobile
+                            .advantage__text
+                                span <b>Наличный или безналичный расчет.</b> Поэтапная оплата.
+                .advantage__right
+                    .advantage__subtitle
+                        span Гарантии по договору.<br> Вы защищены юридически
+                    .advantage__info
+                        span Заключаем договор на выполнение строительных работ с заказчиком, оказываем строительные услуги для юридических лиц
+                    .advantage__contrac
+                        img(src="../img/contrac.webp").desktop
+                        img(src="../img/contrac_mob.webp").mobile
+                    .advantage__brend
+                        img(src="../img/brend.webp").desktop
+                        img(src="../img/brend_mob.webp").mobile
+
+    // end advantage
 
 
 

@@ -67,6 +67,29 @@ $(document).ready(function() {
         ]
     })
 
+    $('.js-slider-orders').slick({
+        dots: true,
+        // autoplay: true,
+        // autoplaySpeed: 5000,
+        appendArrows: $('.orders__arrow'),
+        prevArrow: '<i class="icon-arrow_left"></i>',
+        nextArrow: '<i class="icon-arrow_right"></i>',
+
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToShow: 3,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows:false,
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    })
+
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity
@@ -173,5 +196,24 @@ $(document).ready(function() {
 
     }
     scrollAnchor();
+    
+    // Запрет "отскока" страницы при клике по пустой ссылке с href="#"
+    // $('[href="#"]').forEach((item, i) => {
+    //     item.addEventListener('click', e => {
+    //         e.preventDefault();
+    //     });
+    // });
+
+
+    function addDataFancybox() {
+        let item = $('.itemForDataFancybox_js');
+        let num = 0;
+
+        item.each(function(index, el) {
+            $(this).find('a').attr('data-fancybox', num);
+            num++;
+        });
+    }
+    addDataFancybox();
 
 })

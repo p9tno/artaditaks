@@ -1,0 +1,291 @@
+.advantage {
+    &__content {
+        background: #E6E5E5 url("../img/advantage_bg_mob.webp") center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        border-radius: 2.1875em;
+        padding: 3em 0.9375em 0;
+
+        @media (min-width: 768px) {
+            background: #E6E5E5 url("../img/advantage_bg.webp") center no-repeat;
+            padding: 4.5em 6.25em;
+            display: flex;
+            justify-content: space-between;
+
+            .section__title {
+                text-align: left;
+                line-height: 1.1667;
+
+                margin-bottom: 2em;
+
+                span {
+                    width: auto;
+
+                }
+            }
+
+        }
+
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+            width: 55.75em;
+
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1.5em;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 1em;
+            grid-column-gap: 2em;
+            grid-auto-rows: minmax(14.375em, auto);
+
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:nth-child(1) {
+            .advantage__img {
+                width: 7.375em;
+                height: 6.375em;
+            }
+        }
+
+        &:nth-child(2) {
+            .advantage__img {
+                width: 5.875em;
+                height: 6.1875em;
+            }
+        }
+
+        &:nth-child(3) {
+            .advantage__img {
+                width: 6.25em;
+                height: 5.625em;
+            }
+        }
+
+        &:nth-child(4) {
+            .advantage__img {
+                width: 6.375em;
+                height: 5.5em;
+            }
+        }
+
+        &:nth-child(5) {
+            .advantage__img {
+                width: 7em;
+                height: 5.5em;
+            }
+        }
+
+        &:nth-child(6) {
+            .advantage__img {
+                width: 7.3125em;
+                height: 6.0625em;
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(1) {
+                .advantage__img {
+                    width: 7.125em;
+                    height: 6.0625em;
+                    margin-top: 1em;
+                }
+            }
+
+            &:nth-child(2) {
+                .advantage__img {
+                    width: 6.6875em;
+                    height: 6.6875em;
+                    margin-top: 0.5em;
+                    margin-left: 0.375em;
+                }
+            }
+
+            &:nth-child(3) {
+                .advantage__img {
+                    width: 10.625em;
+                    height: 6.3125em;
+                    margin-top: 1em;
+                    margin-left: 0.8125em;
+                }
+
+                .advantage__text {
+                    width: 13em;
+                }
+            }
+
+            &:nth-child(4) {
+                .advantage__img {
+                    width: 9.5625em;
+                    height: 6em;
+                    margin-top: 0.75em;
+                    margin-left: 1.1875em;
+                }
+            }
+
+            &:nth-child(5) {
+                .advantage__img {
+                    width: 6.8125em;
+                    height: 5.3125em;
+                    margin-top: 1.125em;
+                    margin-left: 1.125em;
+                }
+            }
+
+            &:nth-child(6) {
+                .advantage__img {
+                    width: 7.0625em;
+                    height: 5.5625em;
+                    margin-top: 1em;
+                    margin-left: 0.75em;
+                }
+
+                .advantage__text {
+                    width: 13em;
+                }
+            }
+
+        }
+    }
+
+    &__img {
+        flex: none;
+        @media (max-width: 767px) {
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__text {
+        text-align: center;
+        line-height: 1;
+        min-height: 5em;
+        @media (min-width: 768px) {
+            min-height: 6.5em;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        span {
+            font-size: 10px;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        letter-spacing: 0.02em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+
+        span {
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 1.625;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+                line-height: $main_line_height;
+
+            }
+        }
+    }
+
+    &__info {
+        line-height: 1;
+        padding-bottom: 24.75em;
+        /* 396/16 */
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        span {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    &__contrac {
+        // border: 1px solid #000;
+        position: absolute;
+        bottom: 0;
+        right: -0.9375em;
+        width: 17.25em;
+        height: 17.4375em;
+
+        @media (min-width: 768px) {
+            bottom: -4.5em;
+            right: -4.625em;
+            width: 34.375em;
+            height: 34.6875em;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__brend {
+        position: absolute;
+        top: 8.4375em;
+        right: -0.9375em;
+        width: 7.875em;
+        height: 9.5625em;
+
+        @media (min-width: 768px) {
+            top: 13.125em;
+            right: -6.25em;
+            width: 16.5625em;
+            height: 20.5em;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}

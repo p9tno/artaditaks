@@ -10,6 +10,9 @@
 
 @import 'core/footer';
 
+@import 'vendor/modal';
+@import 'vendor/slick';
+
 @import 'core/form';
 
 @import 'core/buttons';
@@ -19,15 +22,13 @@
 
 @import 'core/programsInfo';
 
-@import 'vendor/modal';
-@import 'vendor/slick';
-
 @import 'core/sidebar';
 @import 'core/firstScreen';
 @import 'core/services';
 @import 'core/priceList';
-
-
-
+@import 'core/house';
+@import 'core/orders';
+@import 'core/advantage';
 
 @import 'core/preloader';
+@import 'core/animate-style';
