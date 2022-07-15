@@ -1,0 +1,192 @@
+.slider__item {
+    &:nth-child(1) {
+        .steps__item {
+            background-image: url("../img/step_bg_mob_1.webp");
+            @media (min-width: 768px) {
+                background-image: url("../img/step_bg_1.webp");
+
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        .steps__item {
+            background-image: url("../img/step_bg_mob_2.webp");
+            @media (min-width: 768px) {
+                background-image: url("../img/step_bg_2.webp");
+
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        .steps__item {
+            background-image: url("../img/step_bg_mob_3.webp");
+            @media (min-width: 768px) {
+                background-image: url("../img/step_bg_3.webp");
+
+            }
+        }
+    }
+}
+
+.steps {
+    position: relative;
+
+    &__item {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 2.1875em;
+        padding: 3em 1em;
+        min-height: 38.125em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            padding: 2.5em 3em 9em;
+        }
+
+        &_white {
+            color: $color_white;
+        }
+
+        > * {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    &__number {
+        display: inline-block;
+        padding: 0.65em 1.721em;
+        text-align: center;
+        background: $color_white;
+        box-shadow: 0 0 75px rgba(0, 0, 0, 0.07);
+        border-radius: 31.25em;
+        margin-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            padding: 0.8194em 2.457em;
+
+        }
+
+        span {
+            font-size: 1em;
+            color: $color_warning;
+            font-weight: 500;
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+        }
+    }
+
+    &__phone {
+        letter-spacing: 0.02em;
+        display: flex;
+        flex-direction: column;
+
+        a,
+        span {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 0.452em;
+            @media (min-width: 768px) {
+                margin-bottom: 0.7em;
+                font-size: 1.5em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: $color_white;
+            text-decoration: none;
+        }
+    }
+
+    &__title {
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+
+        span {
+            font-weight: 700;
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__content {
+        letter-spacing: 0.01em;
+        @media (min-width: 768px) {
+            line-height: 1.4;
+
+        }
+
+        span {
+            font-size: 0.75em;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+    &__action {
+
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: 2.625em;
+            left: 3em;
+
+        }
+
+    }
+
+    &__helmet {
+
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 8em;
+            right: 2em;
+            width: 28.5em;
+            height: 17.5em;
+
+            background-image: url("../img/helmet.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15em;
+        height: 68.75em;
+        z-index: -1;
+        background-image: url("../img/steps_main_bg.webp");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (min-width: 768px) {
+            bottom: -19em;
+            background-position: center;
+        }
+    }
+
+}

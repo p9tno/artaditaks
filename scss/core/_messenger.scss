@@ -1,0 +1,127 @@
+.messenger {
+    &__label {
+        letter-spacing: 0.03em;
+        margin-bottom: 1em;
+        color: $color_black;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.676em;
+            color: inherit;
+        }
+
+        span {
+            font-size: 0.625em;
+
+            @media (min-width: 768px) {
+                font-size: 0.875em;
+
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 0.375em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color_white;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.25em;
+            height: 3.25em;
+            border-radius: 50%;
+
+            @media (min-width: 768px) {
+                width: 2.625em;
+                height: 2.625em;
+                transform: scale(1);
+                transition: transform 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .icon-whatsapp {
+        background-color: #12C868;
+
+        &:before {
+            font-size: 1.375em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+    .icon-viber {
+        background-color: #976FCC;
+
+        &:before {
+            font-size: 1.5em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+
+    }
+
+    .icon-telegram {
+        background-color: #05A0EB;
+
+        &:before {
+            font-size: 0.875em;
+
+        }
+
+    }
+
+    .icon-facebook {
+        background-color: #1877f2;
+
+        &:before {
+            font-size: 1.25em;
+        }
+
+    }
+
+    .icon-instagram {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        // -webkit-background-clip: text;
+        /* Also define standard property for compatibility */
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
+
+        &:before {
+            font-size: 1.25em;
+        }
+
+    }
+
+    .icon-vk {
+        background-color: #45668e;
+
+        &:before {
+            font-size: 1.25em;
+        }
+
+    }
+
+}

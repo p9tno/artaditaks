@@ -1,0 +1,200 @@
+.about {
+    background-image: url("../img/about_bg_mob.webp");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 7em;
+
+    @media (min-width: 768px) {
+        background-image: url("../img/about_bg.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 10.625em;
+
+    }
+
+    &__content {
+
+        @media (min-width: 768px) {
+            width: 55em;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3em;
+        text-align: center;
+
+        span {
+            font-size: 1.1875em;
+        }
+        @media (min-width: 768px) {
+            text-align: left;
+            margin-bottom: 3.4375em;
+
+            span {
+                font-size: 3.75em;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.25;
+        margin-bottom: 2em;
+        text-align: center;
+
+        span {
+            color: $color_black;
+            font-size: 0.75em;
+        }
+
+        @media (min-width: 768px) {
+            text-align: left;
+            line-height: 1.667;
+            margin-bottom: 3.4375em;
+
+            span {
+                font-size: 1.5em;
+            }
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        &:nth-child(1) {
+            position: relative;
+
+            &:before {
+                content: 'лет';
+                position: absolute;
+                top: 0.6em;
+                right: 1.9em;
+                font-size: 1.3125em;
+                font-weight: 700;
+
+            }
+
+        }
+
+        @media (max-width: 767px) {
+            // border: 1px solid #000;
+            width: 50%;
+            margin-bottom: 1.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                .about__label {
+                    span {
+                        margin-left: 0.75em;
+
+                        &:before {
+                            left: -0.75em;
+                            width: 0.375em;
+                            height: 0.375em;
+
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                padding-left: 1.375em;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(1) {
+                // position: relative;
+                width: 14em;
+
+                &:before {
+                    // content: 'лет';
+                    // position: absolute;
+                    top: 1.125em;
+                    right: 1.25em;
+                    font-size: 2.25em;
+                    // font-weight: 700;
+
+                }
+
+            }
+
+            &:nth-child(2) {
+                width: 9em;
+                margin-left: 5.1875em;
+                margin-right: 4.9375em;
+            }
+
+            &:nth-child(3) {
+                width: 10.4em;
+            }
+
+        }
+    }
+
+    &__label {
+        span {
+            position: relative;
+            font-size: 2em;
+            font-weight: 700;
+            margin-left: 0.5625em;
+
+            @media (min-width: 768px) {
+                font-size: 5em;
+                margin-left: 0.325em;
+
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -0.5625em;
+                width: 0.1878em;
+                height: 0.1878em;
+                border-radius: 50%;
+                background-color: $color_warning;
+
+                @media (min-width: 768px) {
+                    left: -0.325em;
+                    width: 0.15em;
+                    height: 0.15em;
+                }
+            }
+
+        }
+
+    }
+
+    &__info {
+        letter-spacing: 0.02em;
+        line-height: 1;
+
+        span {
+            font-size: 0.625em;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 1em;
+            line-height: 1.4;
+
+            span {
+                font-size: 1.125em;
+
+            }
+
+        }
+    }
+
+}

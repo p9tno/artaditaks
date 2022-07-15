@@ -238,12 +238,11 @@
     }
 
     &__contrac {
-        // border: 1px solid #000;
         position: absolute;
         bottom: 0;
-        right: -0.9375em;
-        width: 17.25em;
-        height: 17.4375em;
+        right: -1em;
+        width: 16em;
+        height: 16em;
 
         @media (min-width: 768px) {
             bottom: -4.5em;
@@ -262,8 +261,8 @@
 
     &__brend {
         position: absolute;
-        top: 8.4375em;
-        right: -0.9375em;
+        top: 9.75em;
+        right: -1.75em;
         width: 7.875em;
         height: 9.5625em;
 

@@ -69,8 +69,8 @@ $(document).ready(function() {
 
     $('.js-slider-orders').slick({
         dots: true,
-        // autoplay: true,
-        // autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
         appendArrows: $('.orders__arrow'),
         prevArrow: '<i class="icon-arrow_left"></i>',
         nextArrow: '<i class="icon-arrow_right"></i>',
@@ -85,6 +85,25 @@ $(document).ready(function() {
                 settings: {
                     arrows:false,
                     slidesToShow: 1,
+                }
+            },
+        ]
+    })
+
+    $('.js-slider-steps').slick({
+        dots: false,
+        arrows:false,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToShow: 3,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows:false,
+                    slidesToShow: 1,
+                    dots: true,
                 }
             },
         ]
@@ -111,7 +130,6 @@ $(document).ready(function() {
 
 
     // start animate numbers
-
     function onVisible( selector, callback, repeat = false ) {
 
         let options = {
@@ -139,15 +157,15 @@ $(document).ready(function() {
         }
     }
 
-    onVisible( '.programsInfo__number', function ( e ) {
+    onVisible( '.animate_numbers_js', function ( e ) {
         animateNumber( e, e.innerHTML );
     } );
 
-    function animateNumber( elem, final, duration = 1000 ) {
+    function animateNumber( elem, final, duration = 1500 ) {
         let start = 0;
         // console.log('init');
         setInterval( function () {
-            if ( final > start ) {
+            if ( final >= start ) {
                 elem.innerHTML = start++;
             }
         }, duration / final );
@@ -196,7 +214,7 @@ $(document).ready(function() {
 
     }
     scrollAnchor();
-    
+
     // Запрет "отскока" страницы при клике по пустой ссылке с href="#"
     // $('[href="#"]').forEach((item, i) => {
     //     item.addEventListener('click', e => {

@@ -7,13 +7,13 @@
 @import 'core/template';
 
 @import 'core/header';
+@import 'core/messenger';
 
 @import 'core/footer';
 
+@import 'core/form';
 @import 'vendor/modal';
 @import 'vendor/slick';
-
-@import 'core/form';
 
 @import 'core/buttons';
 
@@ -29,6 +29,9 @@
 @import 'core/house';
 @import 'core/orders';
 @import 'core/advantage';
+@import 'core/about';
+@import 'core/sters';
+@import 'core/contacts';
 
 @import 'core/preloader';
 @import 'core/animate-style';

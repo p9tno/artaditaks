@@ -229,15 +229,175 @@ block content
                     .advantage__info
                         span Заключаем договор на выполнение строительных работ с заказчиком, оказываем строительные услуги для юридических лиц
                     .advantage__contrac
-                        img(src="../img/contrac.webp").desktop
-                        img(src="../img/contrac_mob.webp").mobile
+                        img(src="../img/contrac.webp")
                     .advantage__brend
-                        img(src="../img/brend.webp").desktop
-                        img(src="../img/brend_mob.webp").mobile
+                        img(src="../img/brend.webp")
 
     // end advantage
 
+    // begin about
+    section#about.about.section
+        .container_center
+            .about__wrap
+                h2.section__title 
+                    span <b>О компании</b> Артадитакс
+                .about__content
+                    .about__title
+                        span “Если вы знаете, как должен выглядеть ваш дом, мы точно знаем, как его построить!”
+                    .about__text
+                        span Наши архитекторы воплотят в жизнь любые ваши идеи по проектированию дома и обустройству участка. Мы создадим для вас настоящий дом для жизни. Наши архитекторы воплотят в жизнь любые ваши идеи по проектированию дома и обустройству участка. Мы создадим для вас настоящий дом для жизни.
+                    .about__list
+                        each item in [ { label: '10', info: '<b>на рынке</b> строительства индивидуальных домов и строений' }, { label: '8', info: '<b>ключевых лиц</b> в компании' }, { label: '180', info: '<b>успешно сданных обеъектов</b> за все время работы' }, ]
 
+                            .about__item
+                                .about__label
+                                    span.animate_numbers_js!=item.label
+                                .about__info
+                                    span!=item.info
+
+    // end about
+
+    // begin steps
+    section#steps.steps.section
+        .container_center
+            h2.section__title 
+                span Как <b>начать работу</b> с нами
+
+            .slider-info.mobile
+                span Передвигайте разделы влево/вправо
+                .slider-info-img
+                    img(src="../img/hand.svg")
+
+            //- .orders__arrow
+            .slider.js-slider-steps
+                .slider__item
+                    .steps__item.steps__item_white
+                        .steps__number
+                            span Шаг 1
+                        .steps__phone
+                            span Звоните:
+                            a(href="tel:+375298075009") +375 (29) 807-50-09 
+                            a(href="tel:+375298071188") +375 (29) 807-11-88 
+                        .steps__content
+                            span Познакомимся, проконсультируем и согласуем встречу на объекте или у нас в офисе
+                        .steps__title
+                            span Или оставляйте<br> заявку на сайте
+                        .steps__action
+                            a(href="#").btn.btn_reverse.requisition_js Оставить заявку
+
+
+                each item in [ { number : 'Шаг 2', title: 'Обсудим вашу задачу. Наметим план. Составим смету. Заключим договор', content: 'Выедем на объект для полного замера и составления точной сметы'}, { number : 'Шаг 3', title: 'Приступаем<br> к строительству', content: 'По очередности работ начинаем строительные работы на вашем объекте'} ]
+                    .slider__item
+                        .steps__item
+                            .steps__number
+                                span=item.number
+                            .steps__title
+                                span!=item.title
+                            .steps__content
+                                span=item.content
+
+        .steps__helmet.desktop
+
+        .steps__bg
+
+    // end steps
+
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center
+            .contacts__wrap
+                // start col            
+                .contacts__col
+                    h2.contacts__title 
+                        span Наши <b>контакты</b>
+                    .contacts__list
+                        .contacts__item
+                            i.icon-map
+                            .contacts__content
+                                span г. Брест, ул.Карьерная, 10 А (р-н строительного рынка)
+                        .contacts__item
+                            i.icon-time
+                            .contacts__content
+                                span Пн-Пт: 9:00 - 18:00<br> Сб-Вс - выходные
+                        .contacts__item
+                            i.icon-phone
+                            .contacts__content
+                                a.link_phone(href="tel:+375298075009") +375 (29) 807-50-09 
+                                a.link_phone(href="tel:+375298071188") +375 (29) 807-11-88 
+                        .contacts__item
+                            i.icon-mail
+                            .contacts__content
+                                a(href="mailto:info@siteytyr.ru") info@siteytyr.ru
+
+                    .contacts__messeger
+                        .messenger
+                            .messenger__label
+                                span Пишите, <b>мы онлайн</b>
+                            .messenger__list
+                                .messenger__item
+                                    a(href="viber://chat?number=%2B375298075009" target="_blank").messenger__link
+                                        i.icon-viber
+                                .messenger__item
+                                    a(href="https://wa.me/+375298075009" target="_blank").messenger__link
+                                        i.icon-whatsapp
+                                .messenger__item
+                                    a(href="https://telegram.im/plahotin_s" target="_blank").messenger__link
+                                        i.icon-telegram
+                    .contacts__messeger
+                        .messenger
+                            .messenger__label
+                                span <b>Мы в соцсетях</b>
+                            .messenger__list
+                                .messenger__item
+                                    a(href="#" target="_blank").messenger__link
+                                        i.icon-facebook
+                                .messenger__item
+                                    a(href="#" target="_blank").messenger__link
+                                        i.icon-instagram
+                                .messenger__item
+                                    a(href="#" target="_blank").messenger__link
+                                        i.icon-vk
+
+                    .contacts__requisites
+                        a(href="#") Рекизиты дл юр лиц
+                // end col
+
+                // start col
+                .contacts__col
+                    .contacts__images
+                        .images
+                            .images__label 
+                                span До встречи в офисе 
+                            .images__grid.itemForDataFancybox_js
+                                each item in [1,2,3]
+                                    .images__item
+                                        a(href="../img/contacts_1_"+item+".webp" data-fancybox data-type="image")
+                                            img(src="../img/contacts_1_"+item+".webp")
+                        .images
+                            .images__label 
+                                span До встречи у вас на замере
+                            .images__grid.itemForDataFancybox_js
+                                each item in [1,2,3]
+                                    .images__item
+                                        a(href="../img/contacts_2_"+item+".webp" data-fancybox data-type="image")
+                                            img(src="../img/contacts_2_"+item+".webp")
+
+                // end col
+                // start col
+
+                .contacts__col
+                    .contacts__map
+                        .map
+                            .map__content
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4d25ec6ca125b6f37eec4bfc87ec71abfaa16ba7d8cddf29e58b86179fe6beef&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+
+
+
+                // end col
+
+
+
+    // end contacts
 
     // begin testbtn
     //- section#testbtn.testbtn.section
@@ -288,15 +448,3 @@ block content
 
 
     // end sliderPreview
-
-    // begin programsInfo
-    //- section.section
-    //-     .container_center
-    //-         .programsInfo
-    //-             each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
-    //-                 .programsInfo__item
-    //-                     .programsInfo__number=item.num
-    //-                     .programsInfo__text!=item.text
-
-
-    // end programsInfo
