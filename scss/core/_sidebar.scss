@@ -17,7 +17,6 @@
             cursor: pointer;
 
             i {
-                // display: inline-block;
                 font-size: 0.625em;
                 color: $color_white;
                 transform: rotate(0deg);
@@ -93,26 +92,6 @@
                 font-size: 2.25em;
             }
             margin-bottom: 0.3125em;
-
-            // &_circle {
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     width: 2.625em;
-            //     height: 2.625em;
-            //     border-radius: 50%;
-            //
-            //     margin-bottom: 0.125em;
-            //     margin-left: auto;
-            //     margin-right: auto;
-            //     background-color: $color_white;
-            //
-            //     i {
-            //         color: $color_warning;
-            //         font-size: 1.25em;
-            //     }
-            // }
-
         }
 
         &__text {

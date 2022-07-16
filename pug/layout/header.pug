@@ -78,11 +78,19 @@ header.header
             nav.navbar#navbar
                 ul.navbar__list
                     li.navbar__item.current
-                        a.navbar__link(href="#") Главная
-
-                    each item in ['Услуги и цены', 'портфолио', 'преимущества / гарнатии', 'о компании', 'как заказать', 'контакты']
-                        li.navbar__item
-                            a.navbar__link(href="#")=item
+                        a.navbar__link(href="index.html") Главная
+                    li.navbar__item
+                        a.navbar__link(href="#services") Услуги и цены
+                    li.navbar__item
+                        a.navbar__link(href="#house") портфолио
+                    li.navbar__item
+                        a.navbar__link(href="#advantage") преимущества / гарнатии
+                    li.navbar__item
+                        a.navbar__link(href="#about") о компании
+                    li.navbar__item
+                        a.navbar__link(href="#steps") как заказать
+                    li.navbar__item
+                        a.navbar__link(href="#contacts") контакты
 
             .header__messenger.mobile
                 .messenger

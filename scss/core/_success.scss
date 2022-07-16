@@ -1,0 +1,91 @@
+.success {
+    overflow: hidden;
+    background-image: url("../img/success.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 6em;
+    padding-bottom: 4em;
+
+    @media (min-width: 768px) {
+        padding-top: 21.25em;
+        padding-bottom: 0;
+
+    }
+
+    &__content {
+        color: $color_white;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: $main_font_size;
+        margin-bottom: 1em;
+        line-height: 1.4;
+        @media (min-width: 768px) {
+            width: 42em;
+
+        }
+
+        span {
+            font-size: 1.5em;
+            font-weight: 200;
+            @media (min-width: 768px) {
+                font-size: 3.75em;
+            }
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 4em;
+
+        span {
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+        }
+    }
+
+    &__button {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 4em;
+
+            .btn {
+                font-size: 1.375em;
+                padding: 1.901em 5.389em;
+            }
+
+        }
+    }
+
+    &__thanks {
+        position: relative;
+        margin-left: -0.75em;
+
+        @media (min-width: 768px) {
+            margin-top: -10em;
+            margin-left: -6em;
+        }
+
+        span {
+            font-size: 4.75em;
+            color: rgba(255, 255, 255, 0.17);
+            letter-spacing: 0.07em;
+            @media (min-width: 768px) {
+                font-size: 28.75em;
+
+            }
+        }
+    }
+
+}

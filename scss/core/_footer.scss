@@ -2,13 +2,64 @@
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 2.5em 0;
+	background-color: $main_color;
 
 	&__content {
 		@extend .container_center;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+
 	}
+
+	&__row {
+		@media (max-width: 767px) {
+			> * {
+				margin-bottom: 1.5em;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+		}
+
+		text-align: center;
+
+		@media (min-width: 768px) {
+			text-align: inherit;
+			margin-bottom: 0;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__col {
+		// border: 1px solid #fff;
+		line-height: 1.8;
+		font-size: 0.625em;
+
+		@media (min-width: 768px) {
+			font-size: 0.875em;
+
+		}
+
+		@media (min-width: 768px) {
+
+			line-height: 1.4;
+			width: 19em;
+
+			&:nth-child(2) {
+				width: 35em;
+				text-align: center;
+			}
+		}
+
+		span {
+			color: $color_white;
+		}
+
+		a {
+			color: $color_warning;
+		}
+	}
+
 }

@@ -1,12 +1,8 @@
 .firstScreen {
-    // background: #4d0708 url("../img/home-bg.png") center no-repeat;
-    // background-size: cover;
     color: $color_white;
-
     background: url("../img/first_bg_mob.webp") center no-repeat;
     background-size: cover;
     padding-top: 8.375em;
-    /* 134/16 */
     padding-bottom: 3.75em;
 
     @media (min-width: 768px) {

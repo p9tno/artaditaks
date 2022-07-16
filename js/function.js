@@ -16,12 +16,25 @@ $(document).ready(function() {
     }
     preloader();
 
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
+
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             $('.header__bottom').toggleClass('header__bottom_open');
             $('.header__toggle').toggleClass('header__toggle_open');
-            $('.header__mobilbg').toggleClass('header__mobilbg_open');
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
@@ -30,7 +43,6 @@ $(document).ready(function() {
 
     function openSidebar() {
         $('.sidebar__toggle').click(function(event) {
-            console.log('Показ меню');
             $('.sidebar__toggle').toggleClass('sidebar__toggle_hide');
             $('.sidebar__list').toggleClass('sidebar__list_hide');
         });
@@ -122,11 +134,13 @@ $(document).ready(function() {
     }
     showModal();
 
-
-
-
-
-
+    function showModalPrivacy() {
+        $('.privacy_js').on('click', function (e) {
+            e.preventDefault();
+             $('#privacy').modal('show');
+        });
+    }
+    showModalPrivacy();
 
 
     // start animate numbers
@@ -172,56 +186,24 @@ $(document).ready(function() {
     }
     // end animate numbers
 
-
-    // scrollTop
-
-    // $(document).ready(function(){
-    //     //отменяем стандартную обработку нажатия по ссылке
-    //     $("#menuHeader,#goForm,#menuFooter,#toTop").on("click","a", function (event) {
-    //         event.preventDefault();
-    //         //забираем идентификатор блока с атрибута href
-    //         let id  = $(this).attr('href'),
-    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
-    //             top = $(id).offset().top;
-    //             //анимируем переход на расстояние - top за 1500 мс
-    //         $('body,html').animate({scrollTop: top}, 1500);
-    //     });
-    //
-    // });
-    //
-    // $(document).ready(function(){
-    // 	$(window).scroll(function(){
-    // 		if($(window).scrollTop()>500){
-    // 			$('#toTop').fadeIn(900)
-    // 		}else{
-    // 			$('#toTop').fadeOut(700)
-    // 		}
-    // 	});
-    // });
-
-    // end scrollTop
-
-    function scrollAnchor() {
-        $("#menuHeader,#goForm,#menuFooter,#toTop").on("click","a", function (event) {
-            event.preventDefault();
-            //забираем идентификатор блока с атрибута href
-            let id  = $(this).attr('href'),
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-                top = $(id).offset().top;
-                //анимируем переход на расстояние - top за 1500 мс
+    function navigation() {
+        $("#navbar").on("click","a", function (event) {
+            let id  = $(this).attr('href');
+            let top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1500);
         });
-
     }
-    scrollAnchor();
+    navigation();
 
-    // Запрет "отскока" страницы при клике по пустой ссылке с href="#"
-    // $('[href="#"]').forEach((item, i) => {
-    //     item.addEventListener('click', e => {
-    //         e.preventDefault();
-    //     });
-    // });
-
+    function downloadPrice() {
+        $('.download_price_js').on('click', function (e) {
+            e.preventDefault();
+            let id  = '#priceList';
+            let top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    }
+    downloadPrice();
 
     function addDataFancybox() {
         let item = $('.itemForDataFancybox_js');

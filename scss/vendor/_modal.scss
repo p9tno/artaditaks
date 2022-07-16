@@ -188,3 +188,43 @@
     }
 
 }
+
+.privacy {
+    .modal-dialog {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            width: 80vw;
+
+        }
+    }
+
+    .modal-content {
+        letter-spacing: 0.02em;
+        background: $color_white;
+        padding: 2em 1em;
+
+        h2 {
+            font-size: $main_font_size;
+        }
+
+        p {
+            font-size: 0.75em;
+        }
+
+        @media (min-width: 768px) {
+            padding: 3.875em 5em;
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .modal-close {
+        color: $main_color;
+    }
+}

@@ -223,7 +223,6 @@
     &__info {
         line-height: 1;
         padding-bottom: 24.75em;
-        /* 396/16 */
         @media (min-width: 768px) {
             margin-bottom: 0;
             line-height: 1.5;
@@ -281,10 +280,3 @@
     }
 
 }
-
-.section {
-    &__title {}
-
-}
-
-.container_center {}

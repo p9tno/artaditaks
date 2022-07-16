@@ -1,0 +1,17 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+block content    
+    // begin success
+    section#success.success.section
+        .container_center
+            .success__content
+                h2.success__title
+                    span Спасибо за обращение <b>в нашу компанию!</b>
+                .success__subtitle
+                    span Мы скоро свяжемся с вами!
+                .success__button
+                    a.btn(href="/") На главную
+        .success__thanks  
+            span Спасибо

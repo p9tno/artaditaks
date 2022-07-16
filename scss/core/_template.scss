@@ -12,7 +12,7 @@ body {
 
 	@media (min-width: 1200px) {}
 
-	// @media (min-width: 1600px) {
+	// @media (min-width: 1920px) {
 	// 	font-size: $main_font_size;
 	// }
 
@@ -48,15 +48,11 @@ body {
 
 .section {
 	padding: 2.5em 0;
-	/* 40/16 */
 
 	@media (min-width: 768px) {
 		padding: 3.4375em 0;
-		/* 55/16 */
 
 	}
-	// margin: 6.875em 0;
-	/* 110/16 */
 
 	&__title {
 		text-align: center;
@@ -102,7 +98,3 @@ body {
 .d-none {
 	display: none !important;
 }
-
-// * {
-// 	border: 1px solid #000;
-// }

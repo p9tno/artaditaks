@@ -55,35 +55,20 @@ $(document).ready(function() {
 
 
             if (empty === 0) {
-                // отправляем форму
-                // $('.form').submit();
+
                 $.ajax({
                     url:url,
                     type: "POST",
                     dataType: "html",
                     data: formData,
                     success: function (responce) {
-                        // $('#success').modal('show');
                         console.log('success');
-                        modal.modal('show');
-                        // Пример с перенаправлением на другую страницу
-                        // document.location.href = "js.html";
-                        // Пример вывода текста в какой то блок
-                        message.html('Ваше сообщение отправлено. <br> Мы свяжемся с вами в ближайшее время.');
-                        // message.text('Ваша форма успешно отправлена. <br> Мы свяжемся с вами в ближайшее время.');
-                        // Дополнительно можно удалить текст из блока спустя какое то время
-                        // setTimeout(function () {
-                            //         message.html('');
-                            //     }, 5000);
+                        console.log(formData);
+                        document.location.href = "/success/";
+
                         },
                         error: function (responce) {
                             console.log('error');
-                            modal.modal('show');
-                            message.html('Произошла ошибка при отправке. <br> Попробуйте отправить форму позже.');
-                            // message.text('Произошла ошибка при отправке. <br> Попробуйте отправить форму позже.');
-                            // setTimeout(function () {
-                                //     message.html('');
-                                // }, 5000);
                             }
                         })
                     }
