@@ -511,6 +511,7 @@ body {
   height: auto;
   min-height: 100%;
   font-size: 1em;
+  overflow: hidden;
 }
 
 /* Middle
@@ -3661,7 +3662,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: 11.625em 5.125em;
-  grid-auto-rows: 68px;
+  grid-auto-rows: 4.25em;
 }
 @media (min-width: 768px) {
   .images__grid {

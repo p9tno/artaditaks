@@ -53,6 +53,9 @@ $(document).ready(function() {
         $('.navbar__item').on('click', function() {
             $('.navbar__item').removeClass('current');
             $(this).addClass('current');
+            $('.header__bottom').removeClass('header__bottom_open');
+            $('.header__toggle').removeClass('header__toggle_open');
+            $( 'body' ).removeClass( 'nav-open' );
         })
     };
     activeNav();
@@ -215,5 +218,10 @@ $(document).ready(function() {
         });
     }
     addDataFancybox();
+
+
+    $(function(){
+        $("#tel,#modal-tel").mask("+375 ( 9 9 ) 9 9 9 - 9 9 - 9 9");
+    });
 
 })

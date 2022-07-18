@@ -40,19 +40,11 @@ $(document).ready(function() {
 
             // выполняет функцию для каждого элемента. each - Итерация над объектом JQuery, выполняет функцию для каждого элемента(циклические операции над DOM-элементами)
             fields.each(function (index, el) {
-                // проверка заполнения полей. val - Метод позволяет получать и изменять значения элементов форм
                 if ($(this).val() === '') {
-                    $(this).addClass('invalid');
+                    $(this).focus()
                     empty++;
-                } else {
-                    $(this).removeClass('invalid');
                 }
             });
-
-            setTimeout(function () {
-                fields.removeClass('invalid');
-            }, 1500);
-
 
             if (empty === 0) {
 
